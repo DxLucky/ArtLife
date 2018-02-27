@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link href="../css/goodslist.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+    <%-include("header.html")%>
+    <div class="select">
+        <div class="left">
+            <div id="priceBox">
+                <strong>价格</strong>
+                <span onclick="priceSelect(this,0)"></span>
+                <span onclick="priceSelect(this,1)"></span>
+                <span onclick="priceSelect(this,2)"></span>
+                <span onclick="priceSelect(this,3)"></span>
+                <span onclick="priceSelect(this,4)"></span>
+            </div>
+            <div id="price">
+                <i>0</i>
+                <i>￥2000</i>
+                <i>￥8000</i>
+                <i>￥15000</i>
+                <i>￥30000</i>
+                <i>max</i>
+            </div>
+            <div id="sizeBox">
+                <strong>尺寸</strong>
+                <span onclick="sizeSelect(this,0)"></span>
+                <span onclick="sizeSelect(this,1)"></span>
+                <span onclick="sizeSelect(this,2)"></span>
+                <span onclick="sizeSelect(this,3)"></span>
+                <span onclick="sizeSelect(this,4)"></span>
+            </div>
+            <div id="size">
+                <i>0</i>
+                <i>50cm</i>
+                <i>100cm</i>
+                <i>150cm</i>
+                <i>200cm</i>
+                <i>max</i>
+            </div>
+            <div id="colorBox">
+                <strong>颜色</strong>
+                <span onclick="colorSelect(this,1)"></span>
+                <span onclick="colorSelect(this,2)"></span>
+                <span onclick="colorSelect(this,3)"></span>
+                <span onclick="colorSelect(this,4)"></span>
+                <span onclick="colorSelect(this,5)"></span>
+            </div>
+        </div>
+        <div class="right">
+            <div id="space" class="columnWrap">
+                <strong>装扮空间</strong>
+                <button name="space" value="1" onclick="select(this)">办公</button>
+                <button name="space" value="2" onclick="select(this)">客厅</button>
+                <button name="space" value="3" onclick="select(this)">书房</button>
+                <button name="space" value="4" onclick="select(this)">餐厅</button>
+                <button name="space" value="5" onclick="select(this)">儿童房</button>
+                <button name="space" value="6" onclick="select(this)">走/回廊</button>
+            </div>
+            <div id="spaceStyle" class="columnWrap">
+                <strong>装修风格</strong>
+                <button name="spaceStyle" value="1" onclick="select(this)">简约</button>
+                <button name="spaceStyle" value="2" onclick="select(this)">田园</button>
+                <button name="spaceStyle" value="3" onclick="select(this)">地中海</button>
+                <button name="spaceStyle" value="4" onclick="select(this)">欧式</button>
+            </div>
+            <div id="artClass" class="columnWrap">
+                <strong>艺术分类</strong>
+                <button name="artClass" value="1" onclick="select(this)">油画</button>
+                <button name="artClass" value="2" onclick="select(this)">版画</button>
+                <button name="artClass" value="3" onclick="select(this)">水彩(粉)</button>
+                <button name="artClass" value="4" onclick="select(this)">摄影</button>
+                <button name="artClass" value="2" onclick="select(this)">水墨</button>
+            </div>
+            <div id="artStyle" class="columnWrap">
+                <strong>艺术风格</strong>
+                <button name="artStyle" value="1" onclick="select(this)" onmouseover="show(this)">抽象</button>
+                <button name="artStyle" value="2" onclick="select(this)" onmouseover="show(this)">具象</button>
+                <button name="artStyle" value="3" onclick="select(this)" onmouseover="show(this)">观念</button>
+                <button name="artStyle" value="4" onclick="select(this)" onmouseover="show(this)">国画</button>
+            </div>
+            <div id="artTheme" class="columnWrap">
+                <strong>艺术题材</strong>
+                <button name="artTheme" value="1" onclick="select(this)">人物</button>
+                <button name="artTheme" value="2" onclick="select(this)">风景</button>
+                <button name="artTheme" value="3" onclick="select(this)">静物</button>
+            </div>
+        </div>
+        <div class="show">
+            <div class="textWrap artStyle" id="artStyle1">
+                <div class="text">
+                    <h3>抽象</h3>
+                    <h3>Abstract-Expression</h3>
+                    <div></div>
+                    <p>是既不模仿又不直接再现外在现实，以形式和色彩本身来打动观众的艺术风格。通过对现实的扭曲变形来表现艺术家的激情和内心幻象。</p>
+                </div>
+            </div>
+            <div class="textWrap artStyle" id="artStyle2">
+                <div class="text">
+                    <h3>具象</h3>
+                    <h3>Realism</h3>
+                    <div></div>
+                    <p>起源于十九世纪的法国。写实不是描绘抽象的符号，而是对真实存在的物体或想象出来的对象的描述。</p>
+                </div>
+            </div>
+            <div class="textWrap artStyle" id="artStyle3">
+                <div class="text">
+                    <h3>观念艺术</h3>
+                    <h3>Conceptual Art</h3>
+                    <div></div>
+                    <p>观念艺术质疑艺术这一整体观念，例如：艺术是否可以指涉及其自身之外的东西。观念艺术需要通过语言和文字进行表达。</p>
+                </div>
+            </div>
+            <div class="textWrap artStyle" id="artStyle4">
+                <div class="text">
+                    <h3>传统国画</h3>
+                    <h3>Chinese Painting</h3>
+                    <div></div>
+                    <p>国画一词起源于汉代，汉朝人认为中国是居天地之中者，所以称为中国，将中国的绘画称为“中国画”，简称“国画”。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <div id="searchRange">
+            <div id="priceRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="price">×</button>
+            </div>
+            <div id="sizeRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="size">×</button>
+            </div>
+            <div id="colorRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="color">×</button>
+            </div>
+            <div id="spaceRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="space">×</button>
+            </div>
+            <div id="spaceStyleRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="spaceStyle">×</button>
+            </div>
+            <div id="artClassRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="artClass">×</button>
+            </div>
+            <div id="artStyleRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="artStyle">×</button>
+            </div>
+            <div id="artThemeRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="artTheme">×</button>
+            </div>
+            <div id="listSearchRange" class="searchTarget">
+                <i></i>
+                <button class="close" onclick="deleteTarget(this)" name="listSearch">×</button>
+            </div>
+            <a href="/goodslist.do">重置</a>
+        </div>
+        <span class="fa fa-search" onclick="inputSelect()"></span><input type="text" placeholder="搜索艺术品" id="listSearch">
+    </div>
+    <div class="main">
+        <div class="sort">
+            <select name="startTime" onchange="sort(this)">
+                <option selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上架时间</option>
+                <option>上架时间最新</option>
+                <option>上架时间最早</option>
+            </select>
+            <div></div>
+            <select name="price" onchange="sort(this)">
+                <option selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价格</option>
+                <option>价格从低到高</option>
+                <option>价格从高到低</option>
+            </select>
+            <div></div>
+        </div>
+        <div class="goodsShow">
+            <div id="goodsList1" class="list"></div>
+            <div id="goodsList2" class="list"></div>
+            <div id="goodsList3" class="list"></div>
+            <div id="goodsList4" class="list"></div>
+        </div>
+    </div>
+    <div id="pageWrap"></div>
+    <div id="noResult">
+        对不起，没有查询到符合要求的内容，请重新选择
+    </div>
+    <%-include("footer.html")%>
+</div>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/goodslist.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link href="../css/artist.css" rel="stylesheet">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="../images/logoicon.png">
+            <img src="../images/logo.png">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">首页</a><hr/></li>
+                <li><a href="goodslist.html">购艺术</a><hr/></li>
+                <li><a href="artist.html">艺术家</a><hr/></li>
+                <li><a href="exhibit.html">数字展览馆</a><hr/></li>
+            </ul>
+        </div>
+        <div class="seaLog">
+            <ul>
+                <li id="navSearchWrap"><input type="text" placeholder="请输入关键词" id="navSearch"></li>
+                <li><span class="fa fa-search" onclick="showSearch()"></span></li>
+                <li><a href="login.html" id="login">登录/注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="seat"></div>
+    <!-- =============================================-->
+    <div id="artistOne">
+        <div id="newc">水墨丹青</div>
+        <div id="newe">&nbsp;NewStyle</div>
+        <div id="zsAll">
+            <div id="imgzs">
+                <img src="../images/artist-zs.jpg" style="width: 145px">
+            </div>
+            <div id="zsInfo">
+                <p id="zs">张 三</p><br>
+                <p>在售作品：5 | 已售作品：2</p><br>
+                <div id="zsBtn"><a href="artistInfo.do?id=1" style="color:black;text-decoration: none">进入艺术家主页</a></div>
+            </div>
+        </div>
+        <div id="newImgOne">
+            <img src="../images/artist-new1.jpg" class="newImg">
+            <br><br><span class="zstext">漠然系列</span>
+        </div>
+        <div id="newImgTwo">
+            <img src="../images/artist-new2.jpg" class="newImg">
+            <br><br><span class="zstext">萌化征服</span>
+        </div>
+        <div id="newImgThree">
+            <img src="../images/artist-new3.jpg" class="newImg">
+            <br><br><span class="zstext">闲花问影</span>
+        </div>
+    </div>
+    <div id="artistTwo">
+        <div id="scc">&nbsp;寻风觅景</div>
+        <div id="sce">&nbsp;Searching</div>
+        <div id="lsAll">
+            <div id="imgls">
+                <img src="../images/artist-ls.jpg" style="width: 145px">
+            </div>
+            <div id="lsInfo">
+                <p id="ls">李 四</p><br>
+                <p>在售作品：2 | 已售作品：1</p><br>
+                <div id="lsBtn"><a href="artistInfo.do?id=2" style="color:black;text-decoration: none">进入艺术家主页</a></div>
+            </div>
+        </div>
+        <div id="scImgOne">
+            <img src="../images/artist-sc1.jpg" class="scImg">
+            <br><br><span class="lstext">浮光掠影</span>
+        </div>
+        <div id="scImgTwo">
+            <img src="../images/artist-sc2.jpg" class="scImg">
+            <br><br><span class="lstext">光 之 极</span>
+        </div>
+        <div id="scImgThree">
+            <img src="../images/artist-sc3.jpg" class="scImg">
+            <br><br><span class="lstext">窗外系列</span>
+        </div>
+    </div>
+    <div id="artistThree">
+        <div id="phc">捕光逐影</div>
+        <div id="phe">&nbsp;Photography</div>
+        <div id="wwAll">
+            <div id="imgww">
+                <img src="../images/artist-ww.jpg" style="width: 145px">
+            </div>
+            <div id="wwInfo">
+                <p id="ww">王 五</p><br>
+                <p>在售作品：2 | 已售作品：1</p><br>
+                <div id="wwBtn"><a href="artistInfo.do?id=3" style="color:black;text-decoration: none">进入艺术家主页</a></div>
+            </div>
+        </div>
+        <div id="phImgOne">
+            <img src="../images/artist-ph1.jpg" class="phImg">
+            <br><br><span class="wwtext">奇思妙想</span>
+        </div>
+        <div id="phImgTwo">
+            <img src="../images/artist-ph2.jpg" class="phImg">
+            <br><br><span class="wwtext">仰 望 者</span>
+        </div>
+        <div id="phImgThree">
+            <img src="../images/artist-ph3.jpg" class="phImg">
+            <br><br><span class="wwtext">掌中世界</span>
+        </div>
+    </div>
+    <div id="loadMore"><img src="../images/attist-loading.png" onclick="loadingmaore()"></div>
+    <div id="hideArtistOne">
+        <div id="plc">匠心独具</div>
+        <div id="ple">&nbsp;Artplay</div>
+        <div id="zlAll">
+            <div id="imgzl">
+                <img src="../images/artist-zl.jpg" style="width: 145px">
+            </div>
+            <div id="zlInfo">
+                <p id="zl">赵 六</p><br>
+                <p>在售作品：1 | 已售作品：0</p><br>
+                <div id="zlBtn"><a href="artistInfo.do?id=4" style="color:black;text-decoration: none">进入艺术家主页</a></div>
+            </div>
+        </div>
+        <div id="plImgOne">
+            <img src="../images/artist-pl1.jpg" style="width: 295px" class="plImg">
+            <br><br><span class="zltext">&nbsp;绽 &nbsp;&nbsp;放</span>
+        </div>
+        <div id="plImgTwo">
+            <img src="../images/artist-pl2.gif" style="width: 295px" class="plImg">
+            <br><br><span class="zltext">美的旋律</span>
+        </div>
+        <div id="plImgThree">
+            <img src="../images/artist-pl3.gif" style="width: 295px" class="plImg">
+            <br><br><span class="zltext">双生貔貅</span>
+        </div>
+    </div>
+    <div id="hideArtistTwo">
+        <div id="cgc">游云惊龙</div>
+        <div id="cge">&nbsp;Calligraphy</div>
+        <div id="sqAll">
+            <div id="imgsq">
+                <img src="../images/artist-sq.jpg" style="width: 145px">
+            </div>
+            <div id="sqInfo">
+                <p id="sq">孙 七</p><br>
+                <p>在售作品：1 | 已售作品：0</p><br>
+                <div id="sqBtn"><a href="artistInfo.do?id=5" style="color:black;text-decoration: none">进入艺术家主页</a></div>
+            </div>
+        </div>
+        <div id="cgImgOne">
+            <img src="../images/artist-cg1.jpg"  class="cgImg">
+            <br><br><br><span class="sqtext">&nbsp;楷 &nbsp;&nbsp;书</span>
+        </div>
+        <div id="cgImgTwo">
+            <img src="../images/artist-cg2.jpg" class="cgImg">
+            <br><br><br><span class="sqtext">&nbsp;隶 &nbsp;&nbsp;书</span>
+        </div>
+        <div id="cgImgThree">
+            <img src="../images/artist-cg3.jpg" class="cgImg">
+            <br><br><br><span class="sqtext">&nbsp;行 &nbsp;&nbsp;书</span>
+        </div>
+    </div>
+    <!-- =============================================-->
+    <div id="footer">
+        <ul>
+            <li>
+                <div class="logo">
+                    <img src="../images/logoicon.png">
+                    <img src="../images/logo.png">
+                </div>
+            </li>
+            <li>
+                <a href="aboutus.html">关于我们</a><span> | </span><a href="#">联系我们</a>
+            </li>
+            <li>
+                <span class="fa fa-weixin"></span>
+                <span class="fa fa-weibo"></span>
+                <span class="fa fa-facebook"></span>
+                <span class="fa fa-twitter"></span>
+            </li>
+            <li>川ICP备16003461号 Copyright &copy; 2015-2016 Art Life 版权所有</li>
+        </ul>
+    </div>
+    <script src="../js/artist.js"></script>
+    <script src="../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/payCenter.css">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+<!--header-->
+    <%-include("header.html")%>
+<!--consignee-->
+    <div id="consignee">
+        <p>收货人信息</p>
+        <hr class="hrSyle">
+        <ul>
+            <%for(var i=0;i<address.length;i++){%>
+            <li onclick="selectAdd(this,<%=address[i].addressid%>)">
+                <p><%=address[i].addName%></p>
+                <p><%=address[i].addTel%></p>
+                <p><%=address[i].addressName%></p>
+                <i class="fa fa-trash" onclick="delMe(this,<%=address[i].addressid%>)"></i>
+            </li>
+            <%}%>
+            <li id="addAdress">
+                <div onclick="mystr()"><i class="fa fa-plus"></i></div>
+                新增收货地址
+            </li>
+        </ul>
+        <!--新增收货地址-->
+        <div id="box">
+            <div id="mystress">
+                <div id="tianjia">&nbsp;&nbsp;&nbsp;添加地址<span></span><span id="tipText"></span></div>
+                <form id="myform">
+                    <table>
+                        <tr>
+                            <td>* 收货人:</td>
+                            <td colspan="2">
+                                <input type="text" name="ConsigneeName" id="shouhuoren" placeholder="长度不超过25个字符"/>
+                            </td>
+                            <td colspan="2" id="a1">
+                                <input type="checkbox" name="IsDefault" id="moren" value="1" />&nbsp;&nbsp;设为默认收货地址&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>* 所在地区:</td>
+                            <td>
+                                <select name="Area">
+                                    <option>中国</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="province" onchange="getcity()">
+                                    <option value="0">安徽</option>
+                                    <option value="1">四川</option>
+                                    <option value="2">云南</option>
+                                    <option value="3">河北</option>
+                                    <option value="4">山西</option>
+                                </select>
+                            </td>
+                            <td colspan="2" id="changetext">
+                                <select id="city" onchange="getcityname()">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>*详细地址:</td>
+                            <td colspan="4">
+                                <textarea placeholder="建议您如实填写详细地址，例如街道名称、门牌号码、楼层和房间号等信息" id="detail"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>*手机号码:</td>
+                            <td>
+                                <select name="PhoneCode">
+                                    <option value="86">中国大陆 +86</option>
+                                </select>
+                            </td>
+                            <td colspan="3">
+                                <input type="text" placeholder="手机号码" id="shoujihao" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>电话号码:</td>
+                            <td>
+                                <select name="TelCode1">
+                                    <option value="86">中国大陆 +86</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text"  onfocus="shoujihao()" class="dianhua" placeholder="区号" id="TelCode2" />
+                            </td>
+                            <td>
+                                <input type="text"  onfocus="shoujihao()" class="dianhua" placeholder="电话号码" id="TelNumber" />
+                            </td>
+                            <td>
+                                <input type="text" onfocus="shoujihao()" class="dianhua" placeholder="分机号" id="TelExtNumber" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>邮政编码:</td>
+                            <td colspan="4">
+                                <input type="text" id="youz" onfocus="shoujihao()" class="youzheng" placeholder="如您不清楚邮递区号，请填写000000"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>地址别名:</td>
+                            <td colspan="4">
+                                <input type="text" class="youzheng" onfocus="shoujihao()" placeholder="例如：家、公司等，方便查找"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" id="last">
+                                <button id="save" type="button" onclick="baocun()">保存</button>&nbsp;&nbsp;
+                                <button id="cancel" type="reset" onclick="quxiao()">取消</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--buyThing-->
+    <div id="buyThing">
+        <p>购买商品</p>
+        <hr class="hrSyle">
+        <ul>
+        </ul>
+        <div>总金额：<span>¥</span><span id="totalPrice">123005000</span>&nbsp;</div>
+    </div>
+<!--payMethod-->
+    <div id="payMethod">
+        <p>支付方式</p>
+        <hr class="hrSyle">
+        <div>
+            <input type="radio" name="payWay" checked="checked"><span>银行卡支付</span>
+            <input type="radio" name="payWay"><span>支付宝支付</span>
+        </div >
+        <div>
+            <span></span>
+            <input type="button" value="结算订单" onclick="pay()">
+        </div>
+    </div>
+<!-- =============================================-->
+<!--footer-->
+    <%-include("footer.html")%>
+</div>
+<script src="../js/ajax.js"></script>
+<script src="../js/payCenter.js"></script>
+<script src="../js/common.js"></script>
+</body>
+</html>

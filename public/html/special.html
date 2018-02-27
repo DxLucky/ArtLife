@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/special.css">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="page">
+    <div id="header">
+        <div class="logo">
+            <img src="../images/logoicon.png">
+            <img src="../images/logo.png">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">首页</a><hr/></li>
+                <li><a href="goodslist.html">购艺术</a><hr/></li>
+                <li><a href="artist.html">艺术家</a><hr/></li>
+                <li><a href="exhibit.html">数字展览馆</a><hr/></li>
+            </ul>
+        </div>
+        <div class="seaLog">
+            <ul>
+                <li id="navSearchWrap"><input type="text" placeholder="请输入关键词" id="navSearch"></li>
+                <li><span class="fa fa-search" onclick="showSearch()"></span></li>
+                <li><a href="login.html" id="login">登录/注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="seat"></div>
+    <!-- banner-->
+    <div id="banner">
+        <img src="../images/banner-special.jpg">
+    </div>
+    <!-- 中间内容-->
+    <div id="content">
+        <div class="contentOne">
+            <p><a href="#">首页</a>>无题</p>
+            <p>很多艺术家<br>都有那么几件作品叫「无题」<br>灵感来了，由心而作<br>这种纯粹的艺术感觉<br>没有条条框框去束缚<br>也许就差这么一个机会<br>把它带回家<br>给它一个专属ID</p>
+        </div>
+        <!-- 特别推荐-->
+        <div class="contentTwo">
+            <!-- 特别推荐标题-->
+            <div class="recommend">
+                <p>SPECIAL</p>
+                <p>特别推荐</p>
+            </div>
+            <!-- 特别推荐内容-->
+            <div id="special-content">
+                <!-- 特别推荐内容 左边部分-->
+               <div id="special-left">
+                  <div id="artwork-3732">
+                    <article class="article">
+                        <div class="preview" onclick="proDetail(this)">
+                            <img src='../images/97.jpg' alt='艺术品预览图'/>
+                            <div class='story'>
+                                <div class='text'>画面一派田园场景，又用一些有关人与动物的互动拼贴于所绘的环境中，这些恰到好处的拼贴构成超现实的错置感，这种合理的想象也使这两种元素毫无违和感的结合在一起，既具有独特的幽默感，同时也增强了思考的自由度和深度，这大概就是波普艺术、超现实主义、达达主义艺术的魅力所在。</div>
+                            </div>
+                        </div>
+                        <div class='info'>
+                            <div class='author'>
+                                <a href='#'>王柏陆</a>
+                            </div>
+                            <div class='main'>
+                                <a href='#'>
+                                    <span class='name'>无题</span><br>
+                                    <span class='type'>综合材料</span>&nbsp;
+                                    <span class='size'>37.00×26.00cm</span>
+                                </a>
+                            </div>
+                            <div class='price'>￥1362</div>
+                        </div>
+                    </article>
+                  </div>
+               </div>
+                <!-- 特别推荐内容 右边部分-->
+                <div id="special-right">
+                    <div id="artwork-14003">
+                        <article class="article">
+                            <div class="preview" onclick="proDetail(this)">
+                                <img src='../images/98.jpg' alt='艺术品预览图'/>
+                                <div class='story'>
+                                    <div class='text'>《无题》系列，如诗人笔下的无题诗一样，隐含着语言的创造和寻找词汇组合的可能性，如词性活用、倒装、变形通感等、这些技巧在艺术家孙珂笔下，在心与眼、眼与手的冥想和描绘中，人物的实体和内心意识的涌动，契合成诗的东西。</div>
+                                </div>
+                            </div>
+                            <div class='info'>
+                                <div class='author'>
+                                    <a href='#'>孙珂</a>
+                                </div>
+                                <div class='main'>
+                                    <a href='#'>
+                                        <span class="name">无题 4</span><br>
+                                        <span class='type'>布面油画</span>&nbsp;
+                                        <span class='size'>30.00×40.00cm</span>
+                                    </a>
+                                </div>
+                                <div class='price'>￥13050</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 作品推荐-->
+        <div class="contentThree">
+            <!-- 作品推荐标题-->
+            <div class="recommend">
+                <p>STAR</p>
+                <p>推荐作品</p>
+            </div>
+            <!-- 作品推荐内容-->
+            <div class="art-content">
+                <!-- 作品推荐内容第一行-->
+                <div class="art-content-row1">
+                    <!-- 作品推荐内容第一行左边部分-->
+                    <div id="art-content-row1-left">
+                        <div id="artwork-13535">
+                            <article class="article" onclick="proDetail(this)">
+                                <div class="preview">
+                                    <img src='../images/91.jpg' alt='艺术品预览图'/>
+                                </div>
+                                <div class='info'>
+                                    <div class='author'>
+                                        <a href='#'>段晓刚</a>
+                                    </div>
+                                    <div class='main'>
+                                        <a href='#'>
+                                            <span class='name'>无题 </span><br>
+                                            <span class='type'>布面丙烯</span>&nbsp;
+                                            <span class='size'>50.00×50.00cm</span>
+                                        </a>
+                                    </div>
+                                    <div class='price'>￥5050</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- 作品推荐内容第一行中间部分-->
+                    <div id="art-content-row1-middle">
+                        <div id="artwork-14002">
+                            <article class="article"  onclick="proDetail(this)">
+                                <div class="preview">
+                                    <img src='../images/92.jpg' alt='艺术品预览图' />
+                                </div>
+                                <div class='info'>
+                                    <div class='author'>
+                                        <a href='#'>孙珂</a>
+                                    </div>
+                                    <div class='main'>
+                                        <a href='#'>
+                                            <span class='name'>无题 3</span><br>
+                                            <span class='type'>布面油画</span>&nbsp;
+                                            <span class='size'>30.00×40.00cm</span>
+                                        </a>
+                                    </div>
+                                    <div class='price'>￥13050</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- 作品推荐内容第一行右边部分-->
+                    <div id="art-content-row1-right">
+                        <div id="artwork-189">
+                            <article class="article"  onclick="proDetail(this)">
+                                <div class="preview">
+                                    <img src='../images/93.jpg' alt='艺术品预览图' />
+                                </div>
+                                <div class='info'>
+                                    <div class='author'>
+                                        <a href='#'>李岳</a>
+                                    </div>
+                                    <div class='main'>
+                                        <a href='#'>
+                                            <span class='name'>无题 2</span><br>
+                                            <span class='type'>布面油画</span>&nbsp;
+                                            <span class='size'>40.00×30.00cm</span>
+                                        </a>
+                                    </div>
+                                    <div class='price'>￥1250</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <!-- 作品推荐内容第二行-->
+                <div class="art-content-row2">
+                    <!-- 作品推荐内容第二行左边部分-->
+                    <div id="art-content-row2-left">
+                        <div id="artwork-4389">
+                            <article class="article"  onclick="proDetail(this)">
+                                <div class="preview">
+                                    <img src='../images/94.jpg' alt='艺术品预览图' />
+                                </div>
+                                <div class='info'>
+                                    <div class='author'>
+                                        <a href='#'>张英超</a>
+                                    </div>
+                                    <div class='main'>
+                                        <a href='#'>
+                                            <span class='name'>无题 2</span><br>
+                                            <span class='type'>丝网版</span>&nbsp;
+                                            <span class='size'>57.00×38.00cm</span>
+                                        </a>
+                                    </div>
+                                    <div class='price'>￥5050</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- 作品推荐内容第二行中间部分-->
+                    <div id="art-content-row2-middle">
+                        <div id="artwork-4344">
+                            <article class="article"  onclick="proDetail(this)">
+                                <div class="preview">
+                                    <img src='../images/95.jpg' alt='艺术品预览图' />
+                                </div>
+                                <div class='info'>
+                                    <div class='author'>
+                                        沈敬东
+                                    </div>
+                                    <div class='main'>
+                                            <span class='name'>无题</span><br>
+                                            <span class='type'>丝网版</span>&nbsp;
+                                            <span class='size'>77.00×57.00cm</span>
+                                    </div>
+                                    <div class='price'>￥7050</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- 作品推荐内容第二行右边部分-->
+                    <div id="art-content-row2-right">
+                        <div id="artwork-11953">
+                            <article class="article" onclick="proDetail(this)">
+                                <div class="preview">
+                                    <img src='../images/96.jpg' alt='艺术品预览图' />
+                                </div>
+                                <div class='info'>
+                                    <div class='author'>
+                                        <a href='#'>赵卿</a>
+                                    </div>
+                                    <div class='main'>
+                                        <a href='#'>
+                                            <span class='name'>无题 2 </span><br>
+                                            <span class='type'>布面油画</span>&nbsp;
+                                            <span class='size'>40.00×30.00cm</span>
+                                        </a>
+                                    </div>
+                                    <div class='price'>￥1400</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <ul>
+            <li>
+                <div class="logo">
+                    <img src="../images/logoicon.png">
+                    <img src="../images/logo.png">
+                </div>
+            </li>
+            <li>
+                <a href="aboutus.html">关于我们</a><span> | </span><a href="#">联系我们</a>
+            </li>
+            <li>
+                <span class="fa fa-weixin"></span>
+                <span class="fa fa-weibo"></span>
+                <span class="fa fa-facebook"></span>
+                <span class="fa fa-twitter"></span>
+            </li>
+            <li>川ICP备16003461号 Copyright &copy; 2015-2016 Art Life 版权所有</li>
+        </ul>
+    </div>
+    <script src="../js/common.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="page">
+    <div id="loginBox" >
+        <div class="logo">
+            <a href="#"><img src="../images/logo-login.png"></a>
+        </div>
+        <form action="/login.do" method="post">
+            <span class="loserMe"></span>
+            <input type="text" placeholder=" 请输入手机号" name="tel" onfocus="checkTel(this)" required="required" id="tel"/><br>
+            <input type="password" placeholder=" 请输入密码" name="pwd" id="loginpassw">
+            <div id="register">
+                <input type="text" placeholder=" 请输入验证码" id="textMe" onblur="varify(this)"> <input type="button" value="免费获取验证码" onclick="send()" id="sendMe"/>
+                <input type="password" placeholder=" 请输入6-12位的密码" name="password" id="regpassw" onblur="checkMe(this)">
+            </div>
+            <p id="msg"></p>
+            <input type="submit" value="登录/注册" id="submit" onclick="queryC(this)" disabled="disabled"/>
+            <span id="forgetMe" onclick="changeME()">忘记密码</span>
+        </form>
+        <div id="otherMethod">
+           <ul id="others">
+               <a href="#"><li><span class="fa fa-weibo"></span></li></a>
+               <a href="#"><li id="weixin"><span class="fa fa-weixin"></span></li></a>
+           </ul>
+        </div>
+    </div>
+    <div id="changeMeBox">
+        <div class="logo">
+            <a href="#"><img src="../images/logo-login.png"></a>
+        </div>
+        <form action="/change.do" method="post">
+            <span class="loserMe"></span>
+            <input type="text" placeholder=" 请输入手机号" name="tel"  required="required" onblur="checkTelp(this)" id="telphone"/><br>
+            <span id="alertMe"></span>
+            <input type="text" placeholder=" 请输入验证码" required="required" onblur="varifyT(this)" id="textMeT"> <input type="button" value="免费获取验证码" onclick="sendChange()" id="sendma"/>
+            <input type="password" placeholder=" 请输入6-12位的密码" name="pwdRe" required="required" onblur="checkMe(this)" id="pwdRe">
+            <input type="submit" value="重置密码" id="submitT" disabled="disabled"/>
+            <span onclick="returnLogin()">返回登录/注册</span>
+        </form>
+    </div>
+    <div id="shadow"></div>
+</div>
+<script src="../js/ajax.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>

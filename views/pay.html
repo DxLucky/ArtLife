@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/pay.css">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+<div id="container">
+    <%-include("header.html")%>
+    <div id="mybody">
+        <div id="main">
+            <!-- 收货人信息-->
+            <div id="inform">
+                <p>收货人信息</p>
+                <hr>
+                <div id="stress">
+                    <ul>
+                        <li>
+                            <div id="addsdress">
+                               <ul>
+                                   <%for(var i=0;i<address.length;i++){%>
+                                   <li class="mystress" onclick="selectAdd(this,<%=address[i].addressid%>)">
+                                       <p class="name"><%=address[i].addName%></p>
+                                       <p class="tel"><%=address[i].addTel%></p>
+                                       <p class="stress"><%=address[i].addressName%></p>
+                                       <div class="myput" onclick="delMe(this,<%=address[i].addressid%>)"></div>
+                                   </li>
+                                   <%}%>
+                               </ul>
+                            </div>
+                        </li>
+                        <li id="incStr" onclick="mystr()">
+                            <div>
+                                <div id="cir">+</div>
+                                <p>新增收货地址</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="box">
+                    <div id="mystress">
+                        <div id="tianjia">&nbsp;&nbsp;&nbsp;添加地址<span></span></div>
+                        <form id="myform">
+                            <table>
+                                <tr>
+                                    <td>* 收货人:</td>
+                                    <td colspan="2">
+                                        <input type="text" name="ConsigneeName" id="shouhuoren" placeholder="长度不超过25个字符"/>
+                                    </td>
+                                    <td colspan="2" id="a1">
+                                        <input type="checkbox" name="IsDefault" id="moren" value="1" />&nbsp;&nbsp;设为默认收货地址&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>* 所在地区:</td>
+                                    <td>
+                                        <select name="Area">
+                                            <option>中国</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="province" onchange="getcity()">
+                                            <option value="0">安徽</option>
+                                            <option value="1">四川</option>
+                                            <option value="2">云南</option>
+                                            <option value="3">河北</option>
+                                            <option value="4">山西</option>
+                                        </select>
+                                    </td>
+                                    <td colspan="2" id="changetext">
+                                        <select id="city" onchange="getcityname()">
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>*详细地址:</td>
+                                    <td colspan="4">
+                                        <textarea placeholder="建议您如实填写详细地址，例如街道名称、门牌号码、楼层和房间号等信息" id="detail"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>*手机号码:</td>
+                                    <td>
+                                        <select name="PhoneCode">
+                                            <option value="86">中国大陆 +86</option>
+                                        </select>
+                                    </td>
+                                    <td colspan="3">
+                                        <input type="text" placeholder="手机号码" onclick="dizhi()" id="shoujihao" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>电话号码:</td>
+                                    <td>
+                                        <select name="TelCode1">
+                                            <option value="86">中国大陆 +86</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text"  onfocus="shoujihao()" class="dianhua" placeholder="区号" id="TelCode2" />
+                                    </td>
+                                    <td>
+                                        <input type="text"  onfocus="shoujihao()" class="dianhua" placeholder="电话号码" id="TelNumber" />
+                                    </td>
+                                    <td>
+                                        <input type="text" onfocus="shoujihao()" class="dianhua" placeholder="分机号" id="TelExtNumber" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>邮政编码:</td>
+                                    <td colspan="4">
+                                        <input type="text" id="youz" onfocus="shoujihao()" class="youzheng" placeholder="如您不清楚邮递区号，请填写000000"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>地址别名:</td>
+                                    <td colspan="4">
+                                        <input type="text" class="youzheng" onfocus="shoujihao()" placeholder="例如：家、公司等，方便查找"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" id="last">
+                                        <button id="save" type="button" onclick="baocun()">保存</button>&nbsp;&nbsp;
+                                        <button id="cancel" type="reset" onclick="quxiao()">取消</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- 购买商品-->
+            <div id="shop">
+                <p>购买商品</p>
+                <hr>
+                <div id="shops">
+                    <!-- 商品罗列-->
+                </div>
+                <div  id="total">总金额：&nbsp;<span id="totalPrice"></span></div>
+                <div id="pay">
+                    <p>支付方式</p>
+                    <hr>
+                    <div id="option">
+                        <input type="radio" value="1" name="way" checked="checked">&nbsp;&nbsp;银行卡支付
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" value="2" name="way">&nbsp;&nbsp;支付宝支付
+                    </div>
+                    <div id="mypay"><span></span><input type="button" value="结&nbsp;算" onclick="pay()"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%-include("footer.html")%>
+</div>
+</div>
+<script src="../js/ajax.js"></script>
+<script src="../js/pay.js"></script>
+<script src="../js/common.js"></script>
+</body>
+</html>

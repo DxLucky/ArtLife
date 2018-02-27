@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link href="../css/artistInfo.css" rel="stylesheet">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+<div id="bg">
+    <%-include("header.html")%>
+    <div id="artCenter">
+        <div id="acImg">
+            <img src="../images/artistInfo-house.png" width="20px">
+        </div>
+        <div id="acText">艺术家中心</div>
+    </div>
+    <div id="artInfo">
+        <div id="artInfoLeft">
+            <div id="artImg"><img src="<%=proaward[0].artistSrc%>"></div>
+            <div id="winning"><%-proaward[0].describeTwo%></div>
+        </div>
+        <div id="artInfoRight">
+            <div id="artName"><%=proaward[0].artistName%></div>
+            <div id="rpt"><%=proaward[0].professional%></div>
+            <div id="other"><%-proaward[0].describeOne%></div>
+        </div>
+    </div>
+    <div id="win_work">
+        <div id="acImg1">
+            <img src="../images/artist-works.png" width="20px">
+        </div>
+        <div id="acText1">获奖作品</div>
+    </div>
+    <div id="winImg">
+        <div id="winImg1" onmouseover="ie1()" onmouseout="ie11()"><img src="<%=proaward[1].awardSrc%>" style="width: 350px"><div id="imgEffect1">&nbsp;<h3 id="iet1"><%=proaward[1].awardName%></h3></div></div>
+        <div id="winImg2" onmouseover="ie2()" onmouseout="ie22()"><img src="<%=proaward[2].awardSrc%>" style="width: 350px"><div id="imgEffect2">&nbsp;<h3 id="iet2"><%=proaward[2].awardName%></h3></div></div>
+        <div id="winImg3" onmouseover="ie3()" onmouseout="ie33()"><img src="<%=proaward[3].awardSrc%>" style="width: 350px"><div id="imgEffect3">&nbsp;<h3 id="iet3"><%=proaward[3].awardName%></h3></div></div>
+    </div>
+    <div id="comment">
+        <div id="acImg2">
+            <img src="../images/artist-review.png" width="20px">
+        </div>
+        <div id="acText2">名家点评</div>
+    </div>
+    <div id="artComment">
+        <h4 id="name1"><%=proaward[4].commandName%></h4>
+        <p id="text1"><%-proaward[4].content%></p>
+        <br>
+        <h4 id="name2"><%=proaward[5].commandName%></h4>
+        <p id="text2"><%-proaward[5].content%></p>
+        <br>
+        <h4 id="name3"><%=proaward[6].commandName%></h4>
+        <p id="text3"><%-proaward[6].content%></p>
+    </div>
+    <div id="sales">
+        <div id="acImg3">
+            <img src="../images/artist-sell.png" width="20px">
+        </div>
+        <div id="acText3">在售作品</div>
+    </div>
+    <div id="goodsTop">
+        <div id="goods1">
+            <div id="goodsImg1" onclick='proDetail(this)'><img src="<%=proaward[7].goodsSrc%>" style="width: 300px"></div>
+            <div id="goodsname1"><%=proaward[7].g_name%></div>
+            <div id="goodsprice1">¥<%=proaward[7].price%></div>
+        </div>
+        <div id="goods2">
+            <div id="goodsImg2" onclick='proDetail(this)'><img src="<%=proaward[8].goodsSrc%>" style="width: 300px"></div>
+            <div id="goodsname2"><%=proaward[8].g_name%></div>
+            <div id="goodsprice2">¥<%=proaward[8].price%></div>
+        </div>
+    </div>
+    <div id="goodsBottom">
+        <div id="goods3">
+            <div id="goodsImg3" onclick='proDetail(this)'><img src="<%=proaward[9].goodsSrc%>" style="width: 300px"></div>
+            <div id="goodsname3"><%=proaward[9].g_name%></div>
+            <div id="goodsprice3">¥<%=proaward[9].price%></div>
+        </div>
+        <div id="goods4">
+            <div id="goodsImg4" onclick='proDetail(this)'><img src="<%=proaward[10].goodsSrc%>" style="width: 300px"></div>
+            <div id="goodsname4"><%=proaward[10].g_name%></div>
+            <div id="goodsprice4">¥<%=proaward[10].price%></div>
+        </div>
+    </div>
+    <%-include("footer.html")%>
+    <script src="../js/artistInfo.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../../routes/artistInfo.js"></script>
+</div>
+</div>
+</body>
+</html>

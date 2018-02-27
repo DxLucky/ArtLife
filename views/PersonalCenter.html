@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/PersonalCenterCSS.css" rel="stylesheet">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+<%-include("header.html")%>
+
+
+<div class="Pc_Prompt">
+    <div class="Pc_PromptWz"><span id="Promptuse">修改成功!</span>
+        <a href="/userdisplayshop.do"><input type="button" value="确定" style="outline: none"></a>
+    </div>
+</div>
+
+<div class="pcContent">
+    <div class="pcContentleft">
+    <ul>
+        <li><i class="fa fa-user-secret" aria-hidden="true"></i> 个人中心
+        </li>
+        <li id="myorder"><i class="fa fa-file-text-o" aria-hidden="true"></i> 我的订单
+            <div class="pcContentleftTriangle"></div>
+        </li>
+        <li id="myAddress"><i class="fa fa-map-marker" aria-hidden="true">&nbsp;&nbsp;收货地址</i>
+            <div class="pcContentleftTriangle"></div>
+        </li>
+        <li id="information"><i class="fa fa-user" aria-hidden="true"></i> 基本信息
+            <div class="pcContentleftTriangle"></div>
+        </li>
+        <li id="security"><i class="fa fa-get-pocket" aria-hidden="true"> 安全中心</i>
+            <div class="pcContentleftTriangle"></div>
+        </li>
+    </ul>
+    </div>
+    <div class="pcContentcenter">
+
+    </div>
+    <div class="pcContentright">
+        <div class="MyOrder">
+            <ul>
+                <li id="pc_ShopOngoing">全部</li>
+                <li id="pc_AllShop">进行中</li>
+                <li id="pc_CompletedShop">已完成</li>
+            </ul>
+            <div class="MyOrder1">
+                <hr>
+                <div id="ConductShop">
+                    <%ConductShop.forEach(function(item){%>
+                    <div class="sc_Shop">
+                        <div class="sc_Shopping"><img src="<%=item.goodsSrc%>" alt=""/></div>
+                        <div class="sc_ShopInterface">
+                            <span><%=item.g_name%></span>
+                            <span><%=item.material%> <%=item.g_width%>X<%=item.g_height%>cm</span>
+                            <span><%=item.artistName%></span>
+                        </div>
+                        <div class="sc_ShopPrice">￥<%=item.price%></div>
+                        <div class="sc_ShopDelet" onclick="pc_DeletBtnShop(this)"><i class="fa fa-times" aria-hidden="true"></i></div>
+                </div>
+                <%})%>
+                </div>
+            <div id="allshoping">
+                <%allshoping.forEach(function(item){%>
+                <div class="sc_Shop" >
+                    <div class="sc_Shopping"><img src="<%=item.goodsSrc%>" alt=""/></div>
+                    <div class="sc_ShopInterface">
+                        <span><%=item.g_name%></span>
+                        <span><%=item.material%> <%=item.g_width%>X<%=item.g_height%>cm</span>
+                        <span><%=item.artistName%></span>
+                    </div>
+                    <div class="sc_ShopPrice">￥<%=item.price%></div>
+                    <div class="sc_ShopDelet" onclick="pc_DeletBtnShop(this)"><i class="fa fa-times" aria-hidden="true"></i></div>
+                </div>
+                <%})%>
+            </div>
+                <div id="completeshop">
+                <%completeshop.forEach(function(item){%>
+                <div class="sc_Shop" >
+                    <div class="sc_Shopping"><img src="<%=item.goodsSrc%>" alt=""/></div>
+                    <div class="sc_ShopInterface">
+                        <span><%=item.g_name%></span>
+                        <span><%=item.material%> <%=item.g_width%>X<%=item.g_height%>cm</span>
+                        <span><%=item.artistName%></span>
+                    </div>
+                    <div class="sc_ShopPrice">￥<%=item.price%></div>
+                    <div class="sc_ShopDelet" onclick="pc_DeletBtnShop(this)"><i class="fa fa-times" aria-hidden="true"></i></div>
+                </div>
+                <%})%>
+                </div>
+
+            </div>
+            <div class="pc_Prompt">亲，你现在没有进行中商品~~</div>
+        </div>
+
+        <div class="Myaddress">
+            <div class="addressInitial">
+                <div class="addressWords">
+                    +新增地址
+                </div>
+                <div class="addressfill">
+                    <form action="addaddress.do" method="get" id="addressfill">
+                        <span>*</span>收&ensp;货&ensp;人<input type="text" style="outline: none" name="Consignee" id="Consignee"><br>
+                        <br>
+                        <span>*</span>所在地区
+                             <select id="s_province"></select>
+                             <select id="s_city"></select><br><br>
+                        <span>*</span>详细地址<input type="text" style="outline: none" id="detailedAd" placeholder="请填写详细地址，不少于5个字！"><br><br>
+                        <span>*</span>手机号码<input type="text" style="outline: none" name="ConsigneePhot" id="ConsigneePhot"><span id="phoneTs"></span><br><br>
+                        &ensp;邮政编码<input type="text" style="outline: none"><br><br>
+                        &ensp;地址别名<input type="text" style="outline: none"><br><br>
+                        <input type="button" value="确定" style="outline: none" id="pc-save"><input type="button" value="取消"  style="outline: none" id="pc-cancel">
+                    </form>
+                </div>
+            </div>
+            <span id="useraddrsee"></span>
+            <!--<div class="pc_uesradrs">-->
+
+            <!--</div>-->
+        </div>
+
+        <div class="personalInformation">
+            <form action="pc_information.do" method="post">
+            <div class="personalInformationLeft">
+                <div class="Pc_HeadPhotowz">选择头像</div>
+                <div class="Pc_HeadPhoto">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="personalInformationRight">
+                <div class="Pc_HeadPhoto_dp">
+                    <img src='' alt='' id='img' />
+                </div>
+                <div class="Pc_uploadPhoto">我的头像</div>
+            </div>
+            昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称<input type="text" style="outline: none"><br><br>
+            真实姓名<input type="text" style="outline: none" name="myUserName"><br><br>
+            我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是<input type="radio" name="sex" value="男"/><img src="../images/pc_boy.png"><input type="radio" name="sex" value="女"/><img src="../images/pc_girl.png"><br><br>
+            生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日<select id="selYear"></select>年
+                <select id="selMonth"></select>月
+                <select id="selDay"></select>日<br><br>
+                <input type="button" id="pc_PreservationIf" style="outline: none" value="保存">
+            </form>
+        </div>
+
+        <div class="pc_SecurityCenter">
+            <form action="pc_SubmitModifyIf.do" method="post">
+                <div class="pc_ModifyPassword">
+                    <div class="pc_logonpwdLeft">登录密码</div>
+                    <div class="pc_logonpwdRight">
+                        <span id="pc_DeletBtn">******</span><input type="button" value="修改" style="outline: none" id="pc_pwd">&nbsp;&nbsp;&nbsp;<i class="fa fa-check-circle" aria-hidden="true"></i><br>
+                        <div class="pc_kongb1"></div>当前密码&nbsp;&nbsp;<input type="password" class="pc_UpPwd"><span id="pc_VerificationPwd"></span><br><br>
+                        <div class="pc_kongb2"></div>新密码&nbsp;&nbsp;<input type="password" class="pc_UpPwd" name="pc_newPwd"><span id="pc_VerificationPwd1"></span><br><br>
+                       确认新密码&nbsp;&nbsp;<input type="password" class="pc_UpPwd"><span id="pc_VerificationPwd2"></span><br><br>
+                        <div class="pc_kongb3"></div><input type="button" value="确定" class="pc_butonPwd" id="pc_UpDetermine"><input type="button" value="取消" class="pc_butonPwd">
+                    </div>
+                </div><br><br>
+
+                <div class="pc_ModifyPassword">
+                <div class="pc_logonpwdLeft">电话号码</div>
+                <div class="pc_logonpwdRight">
+                    <%=username%>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="修改" style="outline: none">&nbsp;&nbsp;&nbsp;<i class="fa fa-check-circle" aria-hidden="true"></i><br>
+                    <input type="text" class="pc_UpPwd" placeholder="请输入手机号码"><br><br>
+                    <input type="text" class="pc_UpPwd" placeholder="请输入手机验证码"><br><br>
+                </div>
+                </div>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</div>
+<%-include("footer.html")%>
+</div>
+<script src="../js/common.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/PersonalCentre.js"></script>
+<script class="resources library" src="../js/PersonalCentre.js" type="text/javascript"></script>
+<script type="text/javascript">_init_area();</script>
+
+</body>
+</html>

@@ -1,0 +1,598 @@
+.pcContent{
+    width: 1349px;
+    height: 760px;
+}
+.pcContentleft{
+    width: 255px;
+    height: 760px;
+    float: left;
+    /*border: 1px solid firebrick;*/
+}
+.pcContentleft ul {
+    height: 50px;
+    color: #666;
+
+}
+.pcContentleft li{
+    list-style: none;
+    text-align: right;
+    height: 80px;
+    line-height: 80px;
+    margin-right: 40px;
+    position: relative;
+}
+.pcContentleft li:first-child{
+    color: black;
+    height: 120px;
+    line-height: 120px;
+}
+.pcContentleft li:first-child i{
+    color: #e56a69;
+}
+.pcContentcenter{
+    width: 1px;
+    height: 500px;
+    float: left;
+    display: block;
+    background-color: #333;
+    margin: 0px 95px 0px 0px ;
+}
+.pcContentleftTriangle{
+    border: 13px solid transparent;
+    border-left-color:#333;
+    margin-right: -41px;
+    margin-top: -55px;
+    display: none;
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform:rotate(180deg);
+}
+.pcContentleft li:hover .pcContentleftTriangle{
+    display: block;
+}
+.pcContentleft li:hover{
+    color: black;
+}
+.pcContentright{
+    width: 915px;
+    min-height:800px;
+    float: left;
+    margin-bottom: 60px;
+}
+/*========== 我的订单 =========*/
+.MyOrder{
+    width: 810px;
+    height: auto;
+    display: none;
+    /*border: 1px solid darkblue;*/
+}
+.pc_Prompt{
+    width: 810px;
+    height: 300px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 300px;
+    display: none;
+}
+.MyOrder li{
+    width: 60px;
+    height: 30px;
+    float: left;
+    color: #666;
+    text-align: center;
+    margin-top: 48px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+}
+.MyOrder li:hover{
+    border-bottom: 1px solid #000000;
+    color: black;
+}
+.MyOrder1{
+    width: 810px;
+    height: auto;
+    clear: left;
+    /*margin-top: 10px;*/
+    /*border: 1px solid firebrick;*/
+}
+.MyOrder1 img{
+    width: 125px;
+}
+/*============= 收货地址 =========*/
+.addressInitial{
+    width: 800px;
+    height: 70px;
+    /*height: 600px;*/
+    margin-top: 48px;
+    display: none;
+    overflow: hidden;
+    border: 1px solid #c7c7c7;
+}
+.addressWords{
+    width: 775px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 25px;
+    line-height: 40px;
+    color:#e56a69 ;
+    margin-bottom: 20px;
+}
+.addressfill{
+    width: 700px;
+    height: 500px;
+    margin-left: 75px;
+    line-height: 30px;
+    position: relative;
+}
+#addressfill span{
+    color: #e56a69;
+}
+#addressfill input{
+    width:500px;
+    height: 30px;
+    margin-left: 20px;
+}
+#s_province{
+    width: 150px;
+    height: 30px;
+    margin-left: 15px;
+}
+#s_city{
+    width: 200px;
+    height: 30px;
+}
+#addressfill input:nth-of-type(2){
+    width: 500px;
+    height: 80px;
+    vertical-align: top;
+}
+#addressfill input:nth-of-type(6){
+    width: 130px;
+    border-color: #000;
+    margin-left: 90px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0,0,0,1);
+}
+#addressfill input:nth-of-type(6):hover{
+    background-color: #e56a69;
+    /*border-color: #e56a69;*/
+    border: none;
+}
+#addressfill input:nth-of-type(7){
+    width: 130px;
+    border-color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:#fff;
+    outline: none;
+}
+#addressfill input:nth-of-type(7):hover{
+    /*background-color: #e56a69;*/
+    border:1px solid #e56a69 ;
+    color: #e56a69;
+
+}
+/*============= 个人信息 =========*/
+.personalInformation{
+    width: 800px;
+    height: 500px;
+    margin-top: 48px;
+    display: none;
+}
+.personalInformationLeft{
+    width: 550px;
+    height: 200px;
+    float: left;
+}
+.personalInformationRight{
+    width: 240px;
+    height: 200px;
+    float: right;
+}
+.Pc_HeadPhotowz{
+    float: left;
+    height: 500px;
+    width: 90px;
+}
+.Pc_HeadPhoto{
+    float: left;
+    height: 200px;
+    width: 450px;
+}
+.Pc_HeadPhoto li{
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.Pc_HeadPhoto_dp{
+    width: 130px;
+    height: 130px;
+    border: 1px solid #000;
+}
+.Pc_HeadPhoto_dp img{
+    width: 100%;
+    height: 100%;
+}
+
+.Pc_uploadPhoto{
+    width: 130px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+    background-color: #000000;
+}
+.personalInformation input{
+    width: 300px;
+    height: 30px;
+    margin-left: 26px;
+}
+#selMonth,#selDay,#selYear{
+    width: 84px;
+    height: 30px;
+}
+#selYear{
+    margin-left: 26px;
+}
+.personalInformation input:nth-of-type(3){
+    width: 20px;height: 15px;
+}
+.personalInformation input:nth-of-type(4){
+    width: 20px;height: 15px;
+}
+.personalInformation input:nth-of-type(5){
+    width: 130px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    margin-left: 90px;
+    border: none;
+    text-align: center;
+    line-height: 30px;
+    border-color: #000000;
+    background-color: #000000;
+}
+.personalInformation input:nth-of-type(5):hover{
+    background-color: #e56a69;
+    border-color: #e56a69;
+}
+.pc_SecurityCenter{
+    width: 800px;
+    height: 500px;
+    margin-top: 48px;
+    display: none;
+}
+.pc_SecurityCenter span{
+    /*margin-top: -5px;*/
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.pc_SecurityCenter input:nth-of-type(1){
+    width: 60px;
+    height: 30px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: black;
+}
+
+.pc_SecurityCenter i{
+    color: green;
+}
+
+.pc_ModifyPassword{
+    width: 800px;
+    height: 30px;
+    overflow: hidden;
+}
+.pc_displayPwd{
+    display: none;
+}
+.pc_UpPwd{
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
+.pc_kongb1{
+    width: 17px;
+    height: 30px;
+    display: inline-block;
+}
+.pc_kongb2{
+    width: 32px;
+    height: 30px;
+    display: inline-block;
+}
+.pc_kongb3{
+    width:68px;
+    height: 30px;
+    display: inline-block;
+}
+.pc_butonPwd{
+    width: 70px;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+    background-color: black;
+    /*border:1px ;*/
+    height: 30px;
+}
+.pc_butonPwd:hover{
+    background-color: #e56a69;
+}
+.pc_SecurityCenterwz{
+    width: 200px;
+    height: 400px;
+}
+.pc_logonpwdLeft{
+    margin-top: 5px;
+    width: 80px;
+    height: 300px;
+    float: left;
+}
+.pc_logonpwdRight{
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+#pc_VerificationPwd{
+    color: #e56a69;
+    font-size: 14px;
+}
+#pc_VerificationPwd1{
+    color: #e56a69;
+    font-size: 14px;
+}
+#pc_VerificationPwd2{
+    color: #e56a69;
+    font-size: 14px;
+}
+
+/*======我的订单  进行中  商品 ======*/
+.sc_Shop{
+    width: 800px;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*border: 1px solid forestgreen;*/
+}
+.sc_Shop img{
+    width: 125px;
+    /*height: 125px;*/
+}
+.sc_Shopping{
+    width: 125px;
+    height: 125px;
+    margin-top: 12px;
+    margin-right: 20px;
+    float: left;
+    overflow: hidden;
+    /*border: 1px solid fuchsia;*/
+}
+.sc_ShopInterface{
+    width: 450px;
+    height: 125px;
+    float: left;
+    margin-top: 12px;
+    /*border: 1px solid fuchsia;*/
+}
+.sc_ShopInterface span:nth-of-type(1){
+    font-size: 16px;
+    color: #000000;
+}
+.sc_ShopInterface span:nth-of-type(2){
+    font-size: 14px;
+    color: #666;
+    display:block;
+    margin-top: 10px;
+}
+.sc_ShopInterface span:nth-of-type(3){
+    font-size: 14px;
+    color: #666;
+    margin-left: 0px;
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.sc_ShopInterface span:nth-of-type(4){
+    font-size: 14px;
+    color: #666;
+    display:block;
+
+}
+.sc_Shop{
+    border-bottom: 1px solid #c7c7c7;
+}
+.sc_ShopInterface input{
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+}
+.sc_ShopPrice{
+    width: 90px;
+    height: 125px;
+    float: left;
+    color: #e56a69;
+    margin-top: 12px;
+    text-align:center;
+    /*line-height: 125px;*/
+    /*border: 1px solid forestgreen;*/
+}
+.sc_ShopDelet{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 10px 10px 0px 0px;
+    background-color: #d2d2d2;
+    position: relative;
+    /*border: 1px solid forestgreen;*/
+    top: -15px;
+    left: 0px;
+}
+.sc_ShopDelet>i{
+    color: white;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+}
+.sc_ShopDelet:hover{
+    background-color: #e56a69;
+    cursor: pointer;
+}
+.sc_ShopDelet:hover>i{
+    color: black;
+}
+
+a:hover{color: black}
+a:visited {color:#333333;}
+a:link {color:#333333;}
+
+.pc_uesradrs{
+    width: 350px;
+    height: 200px;
+    margin-top: 48px;
+    /*display: none;*/
+    float: left;
+    /*margin-right: 50px;*/
+
+    border: 1px solid #c7c7c7;
+}
+.pc_uesradrs:hover {
+    box-shadow:1px 1px 5px;
+}
+.pc_uesradrs:nth-child(2n){
+    margin-left: 95px;
+}
+.pc_uesradrs:hover .pc_delectadd1{
+    display: inline-block;
+    /*transition: all 1s linear;*/
+}
+.pc_uesradrs:hover .pc_delectadd2{
+    display: inline-block;
+    /*transition: all 1s linear;*/
+}
+.pc_uesradrscont{
+    width: 320px;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #333;
+    font-size: 14px;
+}
+.pc_delectadd1{
+    width: 60px;
+    height: 30px;
+    margin-top: 25px;
+    margin-left: 190px;
+    display: none;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.pc_delectadd1:hover{
+    background-color: #e56a69;
+}
+.pc_delectadd2:hover{
+    background-color: #e56a69;
+}
+.pc_delectadd2{
+    width: 60px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    margin-top: 25px;
+    margin-left: 10px;
+    display: none;
+}
+
+.pc_uesradrs1{
+    width: 200px;
+    height: 200px;
+    border: 1px solid forestgreen;
+}
+ hr{
+     color: #c7c7c7;
+ }
+ #allshoping{
+     display: none;
+ }
+ #completeshop{
+     display: none;
+ }
+
+ #phoneTs{
+     position: absolute;
+     top: 240px;
+     left: 190px;
+     font-size: 14px;
+     display: none;
+ }
+
+
+
+
+ .Pc_Prompt{
+     width: 300px;
+     height: 150px;
+     position: fixed;
+     top: 250px;
+     left: 550px;
+     z-index: 99;
+     text-align: center;
+     background-color: white;
+     display: none;
+     border: 2px solid black;
+ }
+.Pc_PromptWz{
+    width:150px;
+    height: 100px;
+    margin: 40px auto 0px;
+    font-size: 24px;
+}
+.Pc_Promptdelt{
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    line-height: 20px;
+}
+.Pc_Promptdelt:hover{
+    background-color: #e56a69;
+    color: white;
+}
+.Pc_PromptWz input{
+    width: 60px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    margin-top: 30px;
+    background-color: black;
+}
+.Pc_PromptWz input:hover{
+    background-color: #e56a69;
+}
+#addressfill #pc-cancel{
+    outline: none;
+}
+.pc_SecurityCenter input:nth-of-type(1):hover{
+    background-color: #e56a69;
+}
+#myorder,#information{
+    font-family: Yahei;
+}

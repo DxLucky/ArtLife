@@ -1,0 +1,156 @@
+                 /*-----header------*/
+@keyframes bkTurnBlack {
+    from{
+        background-color: rgba(0,0,0,0.3);
+        height: 0px;
+    }
+    to{
+        background-color: rgba(0,0,0,1);
+        height: 70px;
+    }
+}
+@keyframes bkTurnBack {
+    from{
+        background-color: rgba(0,0,0,1);
+        height: 70px;
+    }
+    to{
+        background-color: rgba(0,0,0,0.3);
+        height: 0px;
+    }
+}
+                 /*-----新作------*/
+@keyframes  enlarge{
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(1.04,1.04);
+    }
+}
+@keyframes  reduce{
+     from{
+         transform: scale(1.04,1.04);
+     }
+    to{
+        transform: scale(1,1);
+    }
+}
+@keyframes rotateImg {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
+@keyframes rotateImgReset {
+    from{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
+/*-----换一换旋转-----*/
+@keyframes rotateChange {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+            /*-----推荐-----*/
+@keyframes  cateGoryEnlarge{
+    0%{
+        transform: scale(1,1);
+    }
+    25%{
+        transform: scale(1.06,1.06);
+    }
+    26%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(90deg);
+    }
+    74%{
+        transform: rotateY(180deg);
+    }
+    75%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+@keyframes  cateGoryEnlargeRe{
+    0%{
+        transform: scale(1,1);
+    }
+    25%{
+        transform: scale(1.06,1.06);
+    }
+    26%{
+        transform: rotateY(180deg);
+    }
+    50%{
+        transform: rotateY(90deg);
+    }
+    74%{
+        transform: rotateY(0deg);
+    }
+    75%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+@keyframes jumpUp{
+    from{margin-top: 100px;}
+    to{margin-top: 0px;}
+}
+@keyframes jumpUpsw{
+    from{margin-top: 100px;}
+    to{margin-top: 35px;}
+}
+@keyframes jumpUpRight{
+    from{margin-right: 150px;}
+    to{margin-right: 50px;}
+}
+@keyframes jumpUpLeft{
+    from{margin-left: 150px;}
+    to{margin-left: 50px;}
+}
+@keyframes jumpUpHeight{
+    from{height: 0%;}
+    to{height: 100%}
+}
+@keyframes jumpUpHeightS{
+    from{height: 396px;}
+    to{height: 0px;}
+}
+@keyframes opacityChange{
+    from{transform: rotate(0deg) scale(0,0);opacity: 0;}
+    to{transform: rotate(1800deg) scale(1,1);opacity: 1;}
+}
+@keyframes hiddenVis{
+    0%{opacity: 0;}
+    35%{opacity: 1;}
+    65%{opacity: 1;}
+    100%{opacity: 0;}
+}
+/*------banner-----*/
+@keyframes bannRotate{
+    from{
+        opacity: 0;
+        transform: rotateY(75deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+

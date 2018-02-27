@@ -1,0 +1,163 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+#page{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#shadow{
+    width: 100%;
+    background: #000000;
+    opacity: 0.4;
+}
+#shadow:hover{
+    opacity: 0;
+}
+#loginBox,#changeMeBox{
+    width: 450px;
+    height: 480px;
+    background: #FFFFFF;
+    border: 5px solid #000000;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -225px;
+    margin-top: -240px;
+    z-index: 2;
+}
+#changeMeBox{
+    display: none;
+}
+.logo{
+    margin: 60px 0px 40px;
+}
+form{
+    width: 372px;
+    margin: 0px auto;
+    text-align: left;
+}
+form #tel,#changeMeBox form input:nth-of-type(1){
+    width: 370px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+}
+#submit,#changeMeBox form input:nth-of-type(5){
+    background: none;
+    border: none;
+    width: 372px;
+    height: 35px;
+    background: #e56a69;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    outline: none;
+}
+#submit:hover,#changeMeBox form input:nth-of-type(5):hover{
+    background: #e75552;
+}
+#forgetMe,#changeMeBox span:nth-last-child(1){
+    color: #666666;
+    font-size: 14px;
+}
+#forgetMe:hover,#changeMeBox span:nth-last-child(1):hover{
+    color: #e56a69;
+    cursor: pointer;
+}
+#otherMethod{
+    width: 100%;
+    height: 80px;
+    background: #dcdcdc;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+}
+#otherMethod li{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border:1px solid #e56a69;
+    float: left;
+}
+#otherMethod #weixin{
+    float: right;
+}
+#otherMethod li span{
+    font-size: 20px;
+    color: #e56a69;
+    margin-top: 10px;;
+}
+ul{
+    width: 120px;
+    height: 40px;
+    margin: 20px auto;
+}
+#loginpassw{
+    width: 370px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+    display: none;
+}
+#submit,#changeMeBox form input:nth-of-type(5){
+    cursor: pointer;
+}
+#register{
+    display: none;
+}
+#register #textMe,#changeMeBox form input:nth-of-type(2){
+    width: 212px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+}
+#register #sendMe,#changeMeBox form input:nth-of-type(3){
+    background: none;
+    border: none;
+    width: 150px;
+    height: 32px;
+    background: #e56a69;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    outline: none;
+    cursor: pointer;
+}
+#register #sendMe:hover,#changeMeBox form input:nth-of-type(3):hover{
+    background: #e75552;
+}
+#register #regpassw,#changeMeBox form input:nth-of-type(4){
+    width: 370px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+}
+#msg{
+    font-size: 14px;
+    color:#e56a69;
+    margin-bottom: 15px;
+    display:none;
+}
+#alertMe,.loserMe{
+    font-size: 14px;
+    color:#e56a69;
+}
+
+

@@ -1,0 +1,72 @@
+body{background-color: #f4f4f4;}
+#successPay{
+    width: 650px;
+    margin:70px auto 0px;
+    height: 300px;
+}
+h2{
+    animation:textScale 0.6s linear both ;
+}
+@keyframes textScale{
+    0%{transform: scale(0,0);opacity: 0;}
+    75%{opacity: 1;transform: scale(1.1,1.1);}
+    100%{opacity: 1;transform: scale(1,1);}
+}
+#successPay>hr{
+    border: none;
+    width: 0%;
+    border-bottom: 1px solid #666666;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: stretch 0.8s linear both ;
+}
+@keyframes stretch {
+    from{width: 0%}
+    to{width:100%}
+}
+#successPay>div:nth-of-type(1){
+    float: right;
+}
+#successPay input:nth-of-type(1){
+    width: 130px;
+    height: 30px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid black;
+    margin-left: 350px;
+    animation: toRight .5s linear both;
+}
+@keyframes toRight {
+    from{margin-left: 0px;opacity: 0;}to{margin-left: 350px;opacity: 1;}
+}
+#successPay input:nth-of-type(1):hover{
+    cursor: pointer;
+    background-color: #e56a69;
+    border: 1px solid #e56a69;
+}
+#successPay input:nth-of-type(2){
+    width: 130px;
+    height: 30px;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid black;
+    float: right;
+    animation: toTop .3s linear both;
+}
+#successPay a:nth-child(2){
+    float:right;
+}
+@keyframes toTop {
+    from{margin-top: 100px;opacity: 0;}to{margin-top: 0px;opacity: 1;}
+}
+#successPay input:nth-of-type(2):hover{
+    border: 1px solid #e56a69;
+    color: #e56a69;
+    cursor: pointer;
+}

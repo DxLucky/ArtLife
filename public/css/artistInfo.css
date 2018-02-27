@@ -1,0 +1,241 @@
+#header{
+position: static;
+}
+#header .nav li:nth-child(3) hr{
+    width: 100%;
+}
+#header .nav li:nth-child(3) a{
+    font-weight: bold;
+}
+/*body*/
+#bg{
+    background-image: url("../images/artistInfo-bg.jpg");
+    width: 1349px;
+}
+#artCenter{
+    margin-left: 75px;
+    margin-top: 40px;
+    width: 1199px;
+    height: 25px;
+    border-bottom: 1px solid darkgray;
+    font-weight: bold;
+}
+#acImg{
+    float: left;
+}
+#acText{
+    color: gray;
+    float: left;
+    margin-left:5px;
+}
+#artInfo{
+    width: 1199px;
+    height: 520px;
+    margin-top: 30px;
+    margin-left: 75px;
+}
+#artInfoLeft{
+    width: 500px;
+    height: 480px;
+    float: left;
+}
+#artImg{
+    width: 300px;
+    height:300px;
+}
+#winning{
+    width: 400px;
+    margin-top: 60px;
+    font-size: 14px;
+}
+#artWin li{
+    height: 20px;
+    list-style: none;
+}
+#artInfoRight{
+    width: 620px;
+    height: 480px;
+    margin-left: 60px;
+    float: left;
+}
+#artName{
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+}
+#rpt{
+    text-align: center;
+    color: gray;
+    width: 100px;
+    height: 20px;
+    margin-top: 5px;
+    border: 1px solid darkgray;
+}
+#other{
+    width: 620px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+#artother li{
+    height: 20px;
+    list-style: none;
+    border: 1px solid black;
+}
+#win_work{
+    height: 25px;
+    width: 1199px;
+    margin-left: 75px;
+    border-bottom: 1px solid darkgray;
+    font-weight: bold;
+    color: gray;
+    margin-top: 20px;
+}
+#acImg1{
+    float: left;
+}
+#acText1{
+    color: gray;
+    float: left;
+    margin-left:5px;
+}
+#winImg{
+    margin-top: 50px;
+}
+#winImg1{
+    float: left;
+    width: 350px;
+    height: 350px;
+    margin-left: 75px;
+}
+#winImg2{
+    margin-left: 75px;
+    float: left;
+    width: 350px;
+    height: 350px;
+}
+#winImg3{
+    margin-left: 75px;
+    float: left;
+    width: 350px;
+    height: 350px;
+}
+#imgEffect1,#imgEffect2,#imgEffect3{
+    width: 350px;
+    height: 350px;
+    background: black;
+    opacity: 0;
+    position: absolute;
+    top: 852px;
+}
+#iet1,#iet2,#iet3{
+    color: white;
+    margin-left: 135px;
+    margin-top: 80px;
+    width: 80px;
+    border-bottom: 3px solid gray;
+    text-align: center;
+}
+#comment{
+    height: 25px;
+    width: 1199px;
+    margin-left: 75px;
+    font-weight: bold;
+    color: gray;
+    margin-top: 480px;
+    border-bottom: 1px solid darkgray;
+}
+#acImg2{
+    float: left;
+}
+#acText2{
+    color: gray;
+    float: left;
+    margin-left:5px;
+}
+#artComment{
+    width: 1100px;
+    height: 260px;
+    margin-left: 125px;
+    margin-top: 40px;
+}
+#artComment p{
+    font-size: 14px;
+}
+#sales{
+    height: 25px;
+    width: 1199px;
+    margin-left: 75px;
+    border-bottom: 1px solid darkgray;
+    font-weight: bold;
+    color: gray;
+    margin-top: 20px;
+}
+#acImg3{
+    float: left;
+}
+#acText3{
+    color: gray;
+    float: left;
+    margin-left:5px;
+}
+#goodsTop{
+    width: 1000px;
+    height: 400px;
+    margin-left: 175px;
+    margin-top: 30px;
+}
+#goods1{
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+#goods2{
+    width: 400px;
+    height: 400px;
+    margin-left: 196px;
+    float: left;
+}
+#goodsBottom{
+    width: 1000px;
+    height: 400px;
+    margin-left: 175px;
+    margin-top: 30px;
+}
+#goods3{
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+#goods4{
+    width: 400px;
+    height: 400px;
+    margin-left: 196px;
+    float: left;
+}
+#goodsImg1,#goodsImg2,#goodsImg3,#goodsImg4{
+    width: 390px;
+    height: 300px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+#goodsname1,#goodsname2,#goodsname3,#goodsname4{
+    width: 200px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 90px;
+    text-align: center;
+}
+#goodsprice1,#goodsprice2,#goodsprice3,#goodsprice4{
+    width: 80px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 150px;
+    text-align: center;
+    color: red;
+}
+
+/*footer*/
+#footer{
+    margin-top: 50px;
+}

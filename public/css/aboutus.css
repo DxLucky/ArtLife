@@ -1,0 +1,160 @@
+/*banner*/
+.banner{
+    width: 1349px;
+    height: 526px;
+    background-image: url("../images/banner-aboutus.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+.banner .text{
+    width: 436px;
+    height: 160px;
+    color: white;
+    text-align: center;
+    margin: 125px auto;
+    padding: 58px 0px;
+    position: relative;
+}
+.banner .text:before{
+    content: "";
+    width: 350px;
+    height: 206px;
+    border-top: 1px solid white;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    animation: leftTitleMove 0.4s linear both;
+}
+.banner .text:after{
+    content: "";
+    width: 350px;
+    height: 206px;
+    border-bottom: 1px solid white;
+    position: absolute;
+    top: 28px;
+    right: 0px;
+    animation: rightTitleMove 0.4s linear 0.4s both;
+}
+.banner .leftLine{
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    width: 1px;
+    height: 200px;
+    background-color: white;
+    animation: contentMove 0.4s linear 0.8s both;
+}
+.banner .rightLine{
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    width: 1px;
+    height: 200px;
+    background-color: white;
+    animation: topMove 0.4s linear 1.2s both;
+}
+.banner .text h2{
+    font-size: 20px;
+    line-height: 2em;
+}
+.banner .text p{
+    font-size: 15px;
+    margin-top: 20px;
+}
+/*main*/
+.main{
+    width: 540px;
+    height: 620px;
+    margin: 95px auto;
+    /*opacity: 0;*/
+}
+.main .title{
+    width: 540px;
+    height: 31px;
+    border-bottom: 1px solid #cccccc;
+    opacity: 0;
+}
+.main .titleRight h2{
+    float: right;
+}
+.main .content{
+    width: 315px;
+    padding: 40px 0px;
+    opacity: 0;
+}
+.main ul{
+    margin-left: 18px;
+}
+.main .content li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.main .content p{
+    width: 218px;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5em;
+}
+.main .content div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333333;
+    margin-left: 22px;
+}
+.main .content span{
+    margin-left: 22px;
+}
+.main .ulRight{
+    margin-left: 205px;
+}
+.main .ulRight p{
+    margin-left: 22px;
+}
+.main .ulRight div{
+    margin-left: 25px;
+}
+.main .ulRight span{
+    margin-left: 0px;
+}
+/* ±º‰÷·∂Øª≠*/
+@keyframes leftTitleMove {
+    from{
+        transform: translate(-70px,0px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}
+@keyframes rightTitleMove {
+    from{
+        transform: translate(70px,0px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}
+@keyframes contentMove {
+    from{
+        transform: translate(0px,-70px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}
+@keyframes topMove {
+    from{
+        transform: translate(0px,70px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}

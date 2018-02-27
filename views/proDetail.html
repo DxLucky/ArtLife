@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/proDetail.css"/>
+</head>
+<body>
+<div id="bodyWrap">
+<%-include("header.html")%>
+<div class="showArt" id="showArt">
+    <div class="artBox" id="artBox" onmousedown="myDrag()">
+
+        <div class="border" id="border">
+            <div class="artPic" id="artPic">
+                <img src="<%=returnValue[0].goodsSrc%>" alt="" ondragstart="return false;"/>
+            </div>
+        </div>
+    </div>
+    <div class="detailBox">
+        <div class="buyInfoBtn" id="buyInfoBtn" onmouseover="mouseIn(isOutB,buyInfo)" onmouseout="isOutB=true">¥</div>
+        <div class="artInfoBtn" id="artInfoBtn" onmouseover="mouseIn(isOutA,detail)" onmouseout="isOutA=true">i</div>
+    </div>
+    <div class="buyInfo" id="buyInfo" onmouseover="isOutB=false" onmouseout="isOutB=true">
+        <span class="price">¥</span>
+        <span class="price" id="price"><%=returnValue[0].price%></span>
+        <div class="notSell">未售</div>
+        <div class="classify">
+            <ul>
+                <li class="original">
+                    <img src="../images/proDetail-icon.png" alt="icon"/>
+                    <span>原创</span>
+                </li>
+                <li class="mount">
+                    <img src="../images/proDetail-icon.png" alt="icon2"/>
+                    <span>无装裱</span>
+                </li>
+            </ul>
+        </div>
+        <br/>
+        <div class="btn">
+            <input type="button" value="加入购物车" id="addToCart" class="addToCart" onclick="addToCart()"/>
+            <div class="addSuccess" id="addSuccess">+1</div>
+            <input type="button" value="立即购买" id="buyNow" class="buyNow" onclick="nowBuy()"/>
+        </div>
+    </div>
+    <div class="detail" id="detail" onmouseover="isOutA=false" onmouseout="isOutA=true">
+        <div class="baseInfo">
+            <span class="authorName" id="authorName"><%=returnValue[1].artistName%></span>
+            <img src="../images/proDetail-v.png" alt="V"/>
+            <div>
+                <span id="artName"><%=returnValue[0].g_name%></span>
+                <span id="material"><%=returnValue[0].material%></span>
+                <span id="artSize">
+                    <%=returnValue[0].g_width%>
+                    ×
+                    <%=returnValue[0].g_height%>
+                    cm
+                </span>
+            </div>
+        </div>
+        <div class="recommend">
+            <p>编辑推荐</p>
+            <div id="recomInfo"><%-returnValue[6].reason%></div>
+        </div>
+    </div>
+    <div class="optionBtn" id="optionBtn">
+        <ul>
+            <li class="first">
+                更多背景
+                <div class="moreBg" id="moreBg">
+                    <div class="bgShow">
+                        <ul id="bgPic">
+                            <li><img src="../images/proDetail-1.jpg" alt="1" onclick="changeBg(1)"/></li>
+                            <li><img src="../images/proDetail-2.jpg" alt="2" onclick="changeBg(2)"/></li>
+                            <li><img src="../images/proDetail-3.jpg" alt="3" onclick="changeBg(3)"/></li>
+                            <li><img src="../images/proDetail-4.jpg" alt="4" onclick="changeBg(4)"/></li>
+                            <li><img src="../images/proDetail-5.jpg" alt="5" onclick="changeBg(5)"/></li>
+                            <li><img src="../images/proDetail-6.jpg" alt="6" onclick="changeBg(6)"/></li>
+                            <li><img src="../images/proDetail-7.jpg" alt="7" onclick="changeBg(7)"/></li>
+                            <li><img src="../images/proDetail-8.jpg" alt="8" onclick="changeBg(8)"/></li>
+                            <li><img src="../images/proDetail-9.jpg" alt="9" onclick="changeBg(9)"/></li>
+                            <li><img src="../images/proDetail-10.jpg" alt="10" onclick="changeBg(10)"/></li>
+                            <li><img src="../images/proDetail-11.jpg" alt="11" onclick="changeBg(11)"/></li>
+                            <li><img src="../images/proDetail-12.jpg" alt="12" onclick="changeBg(12)"/></li>
+                            <li><img src="../images/proDetail-13.jpg" alt="13" onclick="changeBg(13)"/></li>
+                        </ul>
+                    </div>
+                    <div class="prePic" onclick="prePic()">
+                        <img src="../images/proDetail-left%20.png" alt="pre"/>
+                    </div>
+                    <div class="nextPic" onclick="nextPic()">
+                        <img src="../images/proDetail-right.png" alt="next"/>
+                    </div>
+                </div>
+            </li>
+            <li class="second">
+                展示画框
+                <div class="customFrame" id="customFrame">
+                    <div class="frameShow">
+                        <ul id="framePic">
+                            <li><img src="../images/proDetail-default.png" alt="default" onclick="changeDefault()"/></li>
+                            <li><img src="../images/proDetail-14.png" alt="14" onclick="changeBorder(14)"/></li>
+                            <li><img src="../images/proDetail-15.png" alt="15" onclick="changeBorder(15)"/></li>
+                            <li><img src="../images/proDetail-16.png" alt="16" onclick="changeBorder(16)"/></li>
+                            <li><img src="../images/proDetail-17.png" alt="17" onclick="changeBorder(17)"/></li>
+                        </ul>
+                    </div>
+                    <div class="preFrame">
+                        <img src="../images/proDetail-left%20.png" alt="pre"/>
+                    </div>
+                    <div class="nextFrame">
+                        <img src="../images/proDetail-right.png" alt="next"/>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="detailIntro" id="detailIntro">
+    <span>艺术评析</span>
+    <span>艺术品信息</span>
+    <div class="splitLine"></div>
+    <div class="commentSec" id="commentSec">
+        <span class="yinhao yinhaoLeft">“</span>
+        <span class="yinhao yinhaoRight">”</span>
+        <i class="recomReason"><%-returnValue[6].reason%></i>
+        <div class="recomDiv">
+            <img src="<%=returnValue[7].detailsSrc%>" alt=""/>
+            <p><%=returnValue[7].discription%></p>
+        </div>
+        <div class="recomDiv">
+            <img src="<%=returnValue[8].detailsSrc%>" alt=""/>
+            <p><%=returnValue[8].discription%></p>
+        </div>
+    </div>
+    <div class="infoDiv" id="infoDiv">
+        <ul class="productsInformation">
+            <li>
+                <span>作品名称:</span>
+                <p id="proName"><%=returnValue[0].g_name%></p>
+            </li>
+            <li>
+                <span>作品类型:</span>
+                <p id="proType"><%=returnValue[4].artClassName%></p>
+            </li>
+            <li>
+                <span>艺&ensp;术&ensp;家:</span>
+                <p id="artist"><%=returnValue[1].artistName%></p>
+            </li>
+            <li>
+                <span>题&emsp;&emsp;材:</span>
+                <p id="type"><%=returnValue[2].artThemeName%></p>
+            </li>
+            <li>
+                <span>材&emsp;&emsp;质:</span>
+                <p id="texture"><%=returnValue[0].material%></p>
+            </li>
+            <li>
+                <span>风&emsp;&emsp;格:</span>
+                <p id="theme"><%=returnValue[3].artStyleName%></p>
+            </li>
+            <li>
+                <span>尺&emsp;&emsp;寸:</span>
+                <p id="size"><%=returnValue[0].g_width%>×<%=returnValue[0].g_height%>cm</p>
+            </li>
+            <li>
+                <span>摆放空间:</span>
+                <p id="place"><%=returnValue[5].spaceName%></p>
+            </li>
+            <li>
+                <span>创作时间:</span>
+                <p id="time"><%=returnValue[0].startTime%></p>
+            </li>
+        </ul>
+        <div class="smallRemind">
+            <div class="title">
+                <img src="../images/proDetail-tip.png" alt="tip" class="tips"/>
+                ArtLife小贴士
+            </div>
+            <div class="painting">
+                <p>绘图作品</p>
+                <div class="cunFang">
+                    <img src="../images/proDetail-circle.png" alt="circle"/>
+                    存放
+                </div>
+                <ul>
+                    <li>放置画作的理想环境为室温14℃-18℃，相对湿度50%-60%；</li>
+                    <li>避光、防潮请避免阳光长期直射画面，保持画作放置处的空气流通，并远离厨卫等湿气较重的地方，避免灰尘、油烟损害画作；</li>
+                    <li>防风请勿在空调口、暖气扇旁放置画作，避免风力过大造成画作受损；</li>
+                    <li>防损请勿过于频繁地搬动画作，并避免任何腐蚀性材料（如化学药剂、清洁剂等）接触画面；观赏画作时，请尽量避免肢体与画作的直接接触。</li>
+                </ul>
+
+                <div class="clean">
+                    <img src="../images/proDetail-circle.png" alt="circle"/>
+                    清洁与保养
+                </div>
+
+                <p>油画</p>
+                <ul>
+                    <li>请使用干净、柔软的材料（擦布或黑貂豪笔）轻轻擦拭画上的灰尘；避免清洁剂、海绵或吸尘器接触画面；</li>
+                    <li>若受潮，请先用净布吸去水渍，再进行阴干，切忌暴晒；</li>
+                    <li>切勿将两张油画对贴放置，一旦画面粘连，会导致油彩脱坏。</li>
+                </ul>
+
+                <p>中国画</p>
+                <ul>
+                    <li>请使用软质毛刷（如拂尘、羽毛掸子）清除灰尘，勿使用布类，并保证动作轻柔，避免损伤画纸；</li>
+                    <li>若受潮，请用干布或纸巾吸水，再进行阴干，切忌暴晒；</li>
+                </ul>
+
+                <p>版画</p>
+                <ul>
+                    <li>未装裱的版画，请平铺放于干燥处或卷入画筒内；若多张叠放，请在画作之间用软质白纸进行分隔；</li>
+                    <li>已装裱的版画，定期用擦布或纸巾清洁画框即可。</li>
+                </ul>
+            </div>
+            <div class="sculpture">
+                <p>雕塑作品</p>
+
+                <div class="cunFang">
+                    <img src="../images/proDetail-circle.png" alt="circle"/>
+                    存放
+                </div>
+                <ul>
+                    <li>放置雕塑品的理想温度为18℃-24℃，相对湿度为40%-50%。请勿将作品放于过高或过低的温度和湿度下，易引起作品变形损坏；</li>
+                    <li>防损请将雕塑品放于平稳处，避免碰撞、叠压作品造成物理损伤。</li>
+                </ul>
+                <div class="clean">
+                    <img src="../images/proDetail-circle.png" alt="circle"/>
+                    清洁与保养
+                </div>
+                <ul>
+                    <li>请用柔软的干布或软毛刷清洁雕塑品表面，切勿用湿布或化学试剂擦拭作品，避免作品受到腐蚀；</li>
+                    <li>接触作品时，请尽量保持动作轻柔，避免损害作品。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="like">
+    <p>可能你也喜欢</p>
+    <ul>
+        <li><a href="showDetail.do?id=15"><img src="../images/proDetail-20.jpg" alt=""/></a></li>
+        <li><a href="showDetail.do?id=20"><img src="../images/proDetail-21.jpg" alt=""/></a></li>
+        <li><a href="showDetail.do?id=54"><img src="../images/proDetail-22.jpg" alt=""/></a></li>
+        <li><a href="showDetail.do?id=69"><img src="../images/proDetail-23.jpg" alt=""/></a></li>
+        <li><a href="showDetail.do?id=100"><img src="../images/proDetail-24.jpg" alt=""/></a></li>
+    </ul>
+</div>
+<%-include("footer.html")%>
+</div>
+<script src="../js/ajax.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/proDetail.js"></script>
+</body>
+</html>

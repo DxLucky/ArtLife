@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link href="../css/successpay.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+<%-include("header.html")%>
+<!--successpay-->
+    <div id="successPay">
+        <h2>支付成功，我们会尽快为您发货~~</h2>
+        <hr>
+        <input type="button" value="继续购物" onclick="target(0)">
+        <input type="button" value="查看订单" onclick="target(1)">
+    </div>
+    <%-include("footer.html")%>
+</div>
+    <script src="../js/successpay.js"></script>
+    <script src="../js/common.js"></script>
+</body>
+</html>

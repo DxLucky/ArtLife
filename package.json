@@ -1,0 +1,19 @@
+{
+  "name": "ArtLife",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "cookie-parser": "~1.4.2",
+    "ejs": "~2.4.1",
+    "express-session": "~1.13.0",
+    "express": "~3.21.2",
+    "mysql": "~2.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link href="../css/ShoppingCartCSS.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+<%-include("header.html")%>
+<div class="sc_contenter">
+    <div>
+        <span>
+        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        &nbsp;&nbsp;我的购物车</span>
+    </div>
+    <input type="checkbox" name="All" onclick="checkChooseAll(this)" class="chooseBotton">
+    <span>全选</span>你的购物车中有<span><%=shopCartdetail.length%></span>件商品
+    <span id="sc_addWz"></span>
+    <hr>
+
+
+    <%for(var i=0;i<shopCartdetail.length;i++){%>
+    <div class="sc_Shop">
+        <div class="sc_Shopping"><img src='<%=shopCartdetail[i].goodsSrc%>'></div>
+        <div class="sc_ShopInterface">
+            <input type="checkbox" name="mm" onclick="checkItem('All');checkChoose(this)" class="chooseBotton">
+            <span><%=shopCartdetail[i].g_name%></span>
+            <span><%=shopCartdetail[i].material%> <%=shopCartdetail[i].g_width%>x<%=shopCartdetail[i].g_height%></span>
+            <span><%=shopCartdetail[i].artistName%></span>
+                <span>已定制画框</span>
+        </div>
+        <div class="sc_ShopPrice">￥<%=shopCartdetail[i].price%></div>
+        <div class="sc_ShopDelet" onclick="deleteCurrent(this)">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <!--<i class="fa fa-times" aria-hidden="true" onclick="deleteCurrent(this)"></i>-->
+        </div>
+    </div>
+    <%}%>
+
+
+    <div class="sh_fixed">
+        <a href="/goodslist.do"><div class="sh_ContinueShop">继续购物</div></a>
+        <div class="sh_EmptyShop">清空购物车</div>
+        <span id="sc_Prompt3">你已经选购<i> </i>件商品&nbsp;&nbsp;&nbsp;&nbsp;总共：<i>￥0</i></span>
+    </div>
+        <div class="sc_Settlement">￥去结算</div>
+</div>
+<%-include("footer.html")%>
+</div>
+<script src="../js/common.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/ShoppingCart.js"></script>
+</body>
+</html>

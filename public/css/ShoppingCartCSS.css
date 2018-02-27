@@ -1,0 +1,195 @@
+i{
+    color: #e56a69;
+    font-style: normal;
+}
+.sc_contenter{
+    width: 960px;
+    height: auto;
+    overflow: hidden;
+    margin: 45px auto 100px;
+}
+.sc_contenter>div:first-child{
+    height: 20px;
+}
+.sc_contenter>div:first-child>span{
+    display: block;
+    height: 30px;
+    float: right;
+    margin-right: 0px;
+}
+.sc_contenter>div:first-child i{
+    font-size: 28px;
+    color: black;
+}
+.sc_contenter>hr:nth-of-type(1){
+    border: none;
+    height: 1px;
+    border-bottom: 1px solid #c7c7c7;
+    margin-top: 15px;
+}
+.sc_ChooseBton{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border-radius: 16px;
+    display: inline-block;
+    background-color: #e6e6e6;
+}
+.sc_contenter span:nth-of-type(1){
+    color: #666;
+    margin-right: 10px;
+}
+.sc_contenter span:nth-of-type(2){
+    color: #e56a69;
+}
+.sc_contenter span:nth-of-type(3){
+    margin-left: 600px;
+}
+.sc_ShopLine{
+    width: 960px;
+    height: 1px;
+    margin-top: 10px;
+    background-color: #c7c7c7;
+}
+.sc_Shop{
+    width: 920px;
+    min-height: 185px;
+    margin-left: 40px;
+    border-bottom: 1px solid #c7c7c7;
+}
+.sc_Shopping{
+    width: 125px;
+    height: 125px;
+    margin-top: 30px;
+    margin-right: 20px;
+    overflow: hidden;
+    float: left;
+}
+.sc_Shopping img{
+    width: 125px;
+}
+.sc_ShopInterface{
+    width: 590px;
+    height: 125px;
+    float: left;
+    margin-top: 30px;
+}
+.sc_ShopInterface span:nth-of-type(1){
+    font-size: 16px;
+    color: #000000;
+}
+.sc_ShopInterface span:nth-of-type(2){
+    font-size: 14px;
+    color: #666;
+    display:block;
+    margin: 10px 0px 0px 22px;
+}
+.sc_ShopInterface span:nth-of-type(3){
+    font-size: 14px;
+    color: #666;
+    display:block;
+    margin: 6px 0px 15px 22px;
+}
+.sc_ShopInterface span:nth-of-type(4){
+    font-size: 14px;
+    color: #666;
+    margin-left: 22px;
+    display:block;
+
+}
+.sc_ShopInterface input{
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+}
+.sc_ShopPrice{
+    width: 90px;
+    height: 125px;
+    float: left;
+    color: #e56a69;
+    margin-top: 30px;
+}
+.sc_ShopDelet{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 10px 10px 0px 0px;
+    background-color: #d2d2d2;
+    position: relative;
+}
+.sc_ShopDelet>i{
+    color: white;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+
+}
+.sc_ShopDelet:hover{
+    background-color: #e56a69;
+    cursor: pointer;
+}
+.sc_ShopDelet:hover>i{
+    color: black;
+}
+.sh_ContinueShop{
+    width: 130px;
+    height: 30px;
+    color: white;
+    float: left;
+    margin-left: 190px;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+}
+.sh_ContinueShop:hover{
+    background-color: #e56a69;
+    cursor: pointer;
+}
+.sh_EmptyShop{
+    width: 128px;
+    height: 28px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 75px;
+    border: 1px solid #000000;
+}
+.sh_EmptyShop:hover{
+    border: 1px solid #e56a69;
+    color: #e56a69;
+    cursor: pointer;
+}
+.sh_fixed{
+    height: 45px;
+    line-height: 30px;
+    margin: 20px 0px;
+}
+.sh_fixed #sc_Prompt3{
+    display: inline-block;
+    margin-top: 6px;
+}
+ #sc_addWz{
+     display: none;
+     width: 960px;
+     height: 200px;
+     font-size: 28px;
+     text-align: center;
+     line-height: 200px;
+     /*border: 1px solid red;*/
+     position: relative;
+     left: -600px;
+ }
+ .sc_Settlement{
+     width: 128px;
+     height: 28px;
+     float: right;
+     line-height: 30px;
+     text-align: center;
+     border: 1px solid #000000;
+ }
+.sc_Settlement:hover{
+    border: 1px solid #e56a69;
+    color: #e56a69;
+    cursor: pointer;
+}

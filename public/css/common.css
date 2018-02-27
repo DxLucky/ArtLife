@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Microsoft YaHei";
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#header a,#footer a{
+    color: white;
+}
+/*logo通用*/
+.logo{
+    width: 70px;
+    height: 56px;
+    text-align: center;
+}
+.logo img:nth-child(1){
+    width: 66px;
+}
+.logo img:nth-child(2){
+    width: 70px;
+}
+#bodyWrap{
+    width: 1349px;
+    margin: 0px auto;
+}
+/*header*/
+#header{
+    width: 1199px;
+    height: 70px;
+    padding: 0px 75px;
+    background-color: #000000;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+}
+#header li{
+    float: left;
+}
+#header .logo{
+    margin-top: 5px;
+    float: left;
+}
+#header .nav{
+    width: 600px;
+    height: 70px;
+    float: left;
+    margin-left: 120px;
+}
+#header .nav li{
+    height: 50px;
+    line-height: 70px;
+    margin-left: 80px;
+    transition: all 0.2s linear;
+    text-align: center;
+}
+#header .nav li a{
+    margin: 0px 5px;
+}
+#header .nav li hr{
+    border: none;
+    width: 0px;
+    height: 2px;
+    background-color: white;
+    margin: -20px auto 0px;
+}
+#header .nav li:hover hr{
+    width: 100%;
+    transition: all 0.2s linear;
+}
+#header .nav li:hover a{
+    font-weight: bold;
+}
+#header .seaLog{
+    height: 70px;
+    line-height: 70px;
+    float: right;
+}
+#header .seaLog li{
+    margin-left: 20px;
+}
+#header .seaLog li:nth-child(1){
+    margin-left: 0px;
+}
+#header .seaLog li:nth-child(2){
+    margin-left: 0px;
+}
+#navSearchWrap{
+    opacity: 0;
+}
+#header .seaLog input{
+    border: none;
+    outline: none;
+    width: 80px;
+    color: white;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    text-indent: 1em;
+    opacity: 0;
+}
+#header .seaLog span{
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+#header .seaLog span:hover{
+    color: #e56a69;
+    transition: all 0.2s linear;
+}
+#header #login{
+    transition: all 0.2s linear;
+}
+#header #login:hover{
+    color: #e56a69;
+    transition: all 0.2s linear;
+}
+#header .seaLog a{
+    transition: all 0.2s linear;
+}
+#header .seaLog a:hover{
+    color: #e56a69;
+    transition: all 0.2s linear;
+}
+#header .seaLog a img{
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+#seat{
+    width: 1349px;
+    height: 70px;
+}
+/*footer*/
+#footer{
+    width: 1349px;
+    height: 300px;
+    background-image: url("../images/footer.jpg");
+    text-align: center;
+    overflow: hidden;
+}
+#footer ul{
+    margin-top: 60px;
+}
+#footer li{
+    color: white;
+    margin-bottom: 20px;
+}
+#footer li:nth-child(1){
+    display: inline-block;
+}
+#footer li a{
+    font-size: 14px;
+    transition: all 0.2s linear;
+}
+#footer li a:hover{
+    font-weight: bold;
+    transition: all 0.2s linear;
+}
+#footer li:nth-child(3) span{
+    margin: 0px 15px;
+}
+#footer li:nth-child(3) span:hover{
+    color: #e56a69;
+}
+#footer li:nth-child(4){
+    font-size: 12px;
+}

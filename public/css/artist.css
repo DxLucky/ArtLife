@@ -1,0 +1,443 @@
+#header{
+    position: static;
+}
+#header .nav li:nth-child(3) hr{
+    width: 100%;
+}
+#header .nav li:nth-child(3) a{
+    font-weight: bold;
+}
+/*body*/
+/*one*/
+#newc{
+    width: 70px;
+    border-bottom: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    margin-left: 75px;
+    color: gray;
+    margin-top: 30px;
+    font-weight: bold;
+}
+#newe{
+    margin-left: 145px;
+    margin-top:-1px ;
+    width:70px;
+    border-top: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    color: gray;
+    font-weight: bold;
+}
+#zsAll{
+    margin-left: 75px;
+    margin-top: 50px;
+    float: left;
+}
+#imgzs{
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#zsInfo{
+    margin-top: 20px;
+    font-size: 12px;
+    width: 145px;
+    text-align: center;
+}
+#zsBtn{
+    border: 1px solid gray;
+    width: 100px;
+    height: 16px;
+    margin-left: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:all 1s linear;
+}
+#zsBtn:hover{
+    background: darkgray;
+    transition:all 0.3s linear;
+}
+#newImgOne{
+    width: 295px;
+    height: 209px;
+    margin-left: 60px;
+    float: left;
+    margin-top: 40px;
+}
+#newImgTwo{
+    width: 295px;
+    height: 209px;
+    margin-left: 55px;
+    float: left;
+    margin-top: 40px;
+}
+#newImgThree{
+    width: 295px;
+    height: 209px;
+    margin-left: 55px;
+    float: left;
+    margin-top: 40px;
+}
+.zstext{
+    margin-left: 110px;
+}
+.newImg{
+    transition: all 0.3s linear;
+}
+.newImg:hover{
+    transform: scale(1.15,1.15);
+    box-shadow:3px 3px 3px 3px gray;
+    transition: all 0.3s linear;
+}
+/*two*/
+#artistTwo{
+    margin-top: 350px;
+}
+#scc{
+    width: 70px;
+    border-bottom: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    margin-left: 75px;
+    color: gray;
+    margin-top: 50px;
+    font-weight: bold;
+}
+#sce{
+    margin-left: 145px;
+    margin-top:-1px ;
+    width:70px;
+    border-top: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    color: gray;
+    font-weight: bold;
+}
+#lsAll{
+    margin-left: 75px;
+    margin-top: 50px;
+    float: left;
+}
+#imgls{
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#lsInfo{
+    margin-top: 20px;
+    font-size: 12px;
+    width: 145px;
+    text-align: center;
+}
+#lsBtn{
+    border: 1px solid gray;
+    width: 100px;
+    height: 16px;
+    margin-left: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:all 1s linear;
+}
+#lsBtn:hover{
+    background: darkgray;
+    transition:all 0.3s linear;
+}
+#scImgOne{
+    width: 295px;
+    height: 209px;
+    margin-left: 60px;
+    float: left;
+    margin-top: 40px;
+}
+#scImgTwo{
+    width: 295px;
+    height: 209px;
+    margin-left: 55px;
+    float: left;
+    margin-top: 40px;
+}
+#scImgThree{
+    width: 295px;
+    height: 209px;
+    margin-left: 55px;
+    float: left;
+    margin-top: 40px;
+}
+.lstext{
+    margin-left: 110px;
+}
+.scImg{
+    transition: all 0.3s linear;
+}
+.scImg:hover{
+    transform: scale(1.2,1.2);
+    box-shadow:3px 3px 3px 3px gray;
+    transition: all 0.3s linear;
+}
+/*three*/
+#artistThree{
+    margin-top: 350px;
+}
+#phc{
+    width: 70px;
+    border-bottom: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    margin-left: 75px;
+    color: gray;
+    margin-top: 50px;
+    font-weight: bold;
+}
+#phe{
+    margin-left: 145px;
+    margin-top:-1px ;
+    width:70px;
+    border-top: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    color: gray;
+    font-weight: bold;
+}
+#wwAll{
+    margin-left: 75px;
+    margin-top: 50px;
+    float: left;
+}
+#imgww{
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#wwInfo{
+    margin-top: 20px;
+    font-size: 12px;
+    width: 145px;
+    text-align: center;
+}
+#wwBtn{
+    border: 1px solid gray;
+    width: 100px;
+    height: 16px;
+    margin-left: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:all 1s linear;
+}
+#wwBtn:hover{
+    background: darkgray;
+    transition:all 0.3s linear;
+}
+#phImgOne{
+    width: 200px;
+    height: 209px;
+    margin-left: 90px;
+    float: left;
+    margin-top: 50px;
+}
+#phImgTwo{
+    width: 200px;
+    height: 209px;
+    margin-left: 160px;
+    float: left;
+    margin-top: 50px;
+}
+#phImgThree{
+    width: 200px;
+    height: 209px;
+    margin-left: 160px;
+    float: left;
+    margin-top: 50px;
+}
+.wwtext{
+    margin-left: 70px;
+}
+.phImg{
+    transition: all 0.3s linear;
+}
+.phImg:hover{
+    transform: scale(1.2,1.2);
+    box-shadow:3px 3px 3px 3px gray;
+    transition: all 0.3s linear;
+}
+/*loading*/
+#loadMore{
+    margin-top: 320px;
+    margin-left: 656px;
+    cursor: pointer;
+}
+#abc{
+    display: none;
+}
+/*hideOne*/
+#hideArtistOne{
+    margin-top: 350px;
+    display: none;
+}
+#plc{
+    width: 70px;
+    border-bottom: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    margin-left: 75px;
+    color: gray;
+    margin-top: 50px;
+    font-weight: bold;
+}
+#ple{
+    margin-left: 145px;
+    margin-top:-1px ;
+    width:70px;
+    border-top: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    color: gray;
+    font-weight: bold;
+}
+#zlAll{
+    margin-left: 75px;
+    margin-top: 50px;
+    float: left;
+}
+#imgzl{
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#zlInfo{
+    margin-top: 20px;
+    font-size: 12px;
+    width: 145px;
+    text-align: center;
+}
+#zlBtn{
+    border: 1px solid gray;
+    width: 100px;
+    height: 16px;
+    margin-left: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:all 1s linear;
+}
+#zlBtn:hover{
+    background: darkgray;
+    transition:all 0.3s linear;
+}
+#plImgOne{
+    width: 295px;
+    height: 209px;
+    margin-left: 60px;
+    float: left;
+    margin-top: 50px;
+}
+#plImgTwo{
+    width: 295px;
+    height: 209px;
+    margin-left: 55px;
+    float: left;
+    margin-top: 50px;
+}
+#plImgThree{
+    width: 295px;
+    height: 209px;
+    margin-left: 55px;
+    float: left;
+    margin-top: 50px;
+}
+.zltext{
+    margin-left: 110px;
+}
+.plImg{
+    transition: all 0.3s linear;
+}
+.plImg:hover{
+    transform: scale(1.2,1.2);
+    box-shadow:3px 3px 3px 3px gray;
+    transition: all 0.3s linear;
+}
+/*hideTwo*/
+#hideArtistTwo{
+    margin-top: 350px;
+    display: none;
+    margin-bottom: 350px;
+}
+#cgc{
+    width: 70px;
+    border-bottom: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    margin-left: 75px;
+    color: gray;
+    margin-top: 50px;
+    font-weight: bold;
+}
+#cge{
+    margin-left: 145px;
+    margin-top:-1px ;
+    width:70px;
+    border-top: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    color: gray;
+    font-weight: bold;
+}
+#sqAll{
+    margin-left: 75px;
+    margin-top: 50px;
+    float: left;
+}
+#imgsq{
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#sqInfo{
+    margin-top: 20px;
+    font-size: 12px;
+    width: 145px;
+    text-align: center;
+}
+#sqBtn{
+    border: 1px solid gray;
+    width: 100px;
+    height: 16px;
+    margin-left: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:all 1s linear;
+}
+#sqBtn:hover{
+    background: darkgray;
+    transition:all 0.3s linear;
+}
+#cgImgOne{
+    width: 295px;
+    height: 209px;
+    margin-left: 80px;
+    float: left;
+    margin-top: 80px;
+}
+#cgImgTwo{
+    width: 295px;
+    height: 209px;
+    margin-left: 80px;
+    float: left;
+    margin-top: 80px;
+}
+#cgImgThree{
+    width: 295px;
+    height: 209px;
+    margin-left: 80px;
+    float: left;
+    margin-top: 80px;
+}
+.sqtext{
+    margin-left: 75px;
+}
+.cgImg{
+    transition: all 0.3s linear;
+}
+.cgImg:hover{
+    transform: scale(1.2,1.2);
+    box-shadow:3px 3px 3px 3px gray;
+    transition: all 0.3s linear;
+}
+/*footer*/
+#footer{
+    margin-top: 30px;
+}

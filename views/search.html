@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ArtLife</title>
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link href="../font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div id="bodyWrap">
+<div id="container">
+    <%-include("header.html")%>
+    <div id="mybody">
+        <div id="main">
+            <div id="search">
+                <div id="myimg">
+                    <div id="myimg1"></div>
+                    <div id="myimg2">
+                        <input type="text" id="mysearch" value="<%=keyWordValue%>">
+                    </div>
+                    <div id="myimg3" onclick="qingchu()">×</div>
+                    <div id="myimg4" onclick="searchProduct()">搜索</div>
+                </div>
+            <div id="art">
+                <div id="thing" onclick="show(1)">艺术品</div>
+                <div id="artist" onclick="show(0)">艺术家</div>
+            </div>
+                <div id="myresult"><span id="paintResult"></span><span id="artistResult"></span>个结果</div>
+            </div>
+            <div id="list">
+                <hr>
+                <!-- 搜索艺术品-->
+                <div id="paint"></div>
+                 <!-- 搜索艺术家-->
+                <div id="artistR">
+
+                </div>
+
+
+
+            </div>
+            <div id="page">
+                <div id="myinput"></div>
+                <div id="artistPage"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../js/ajax.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

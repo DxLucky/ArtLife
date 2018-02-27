@@ -1,0 +1,277 @@
+#mybody{
+    width: 1349px;
+}
+#main{
+    width: 700px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+}
+#container{
+    width: 1349px;
+}
+#search{
+    margin-top: 50px;
+    width: 392px;
+}
+#myimg{
+    width: 390px;
+    height: 35px;
+    border: 1px solid #a0a0a0;
+}
+#myimg1{
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: url("../images/search2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+#myimg2{
+    float: left;
+    width: 250px;
+    height: 35px;
+}
+#mysearch{
+    height: 33px;
+    width: 250px;
+    outline: none;
+    border: 1px solid transparent;
+}
+#myimg3{
+    float: left;
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    font-size: 23px;
+    text-align: center;
+    color: #333333;
+    font-weight: 400;
+    cursor: pointer;
+}
+#myimg4{
+    float: left;
+    width: 67px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 11px;
+    text-align: center;
+    color: #333333;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-left-color: #a0a0a0;
+}
+#art{
+    margin-top: 25px;
+    height: 32px;
+}
+#art div{
+    font-size: 15px;
+    font-weight: 500;
+    float: left;
+    height: 30px;
+    width: 45px;
+    line-height: 30px;
+    cursor: pointer;
+}
+#art div:nth-child(1){
+    font-weight: 700;
+    border-bottom: 2px solid red;
+}
+#art div:hover{
+    font-weight: 700;
+}
+#art div:nth-child(2){
+    margin-left: 40px;
+}
+#myresult{
+    margin-top: 20px;
+    font-size: 11px;
+}
+hr{
+    margin-top: 10px;
+    border: none;
+    background: #d3d3d3;
+    height: 1px;
+}
+
+/*搜索艺术品部分*/
+.mypaint{
+    border-bottom: 1px solid #b5b5b5;
+    width: 698px;
+    height: 190px;
+}
+.left{
+    margin-top: 35px;
+    margin-left: 20px;
+    float: left;
+    width: 150px;
+    height: 103px;
+    text-align: center;
+    overflow: hidden;
+}
+.left img{
+    height: 100%;
+    cursor: pointer;
+}
+.middle{
+    color: grey;
+    font-size: 10px;
+    float: left;
+    width: 200px;
+    margin-top: 35px;
+}
+.middle p{
+    margin-top: 8px;
+}
+.middle p:nth-child(1){
+    color: black;
+    font-size: 12px;
+}
+.middle p:nth-child(2){
+    margin-top: 20px;
+}
+.right{
+    color: grey;
+    font-size: 10px;
+    float: left;
+    width: 320px;
+    line-height: 17px;
+    margin-top: 35px;
+}
+.right p:nth-child(1){
+    margin-top: 10px;
+    color: black;
+}
+.right div:nth-child(2){
+    margin-top: 15px;
+    height: 35px;
+    overflow: hidden;
+}
+.right p:nth-child(3){
+    margin-top: 15px;
+}
+.right a{
+    color: #3e7efd;
+    text-decoration: none;
+}
+
+
+#page{
+    width: 698px;
+    height: 50px;
+    margin: 0px auto 50px;
+}
+#myinput{
+    margin-top: 30px ;
+}
+#artistPage{
+    margin-top: -20px ;
+}
+#artistPage .noresult{
+    margin-top: 50px;
+}
+#page input{
+    height: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#page input:hover{
+    color: white;
+    background: black;
+}
+.page{
+    background: transparent;
+    width: 70px;
+    border: 1px solid transparent;
+    color: black;
+    outline: none;
+}
+.mypage{
+    color: white;
+    background: black;
+    width: 138px;
+    border: 1px solid transparent;
+    outline: none;
+
+}
+.noresult{
+    font-size: 18px;
+}
+.nowpage{
+    background: black;
+    width: 70px;
+    border: 1px solid transparent;
+    color: white;
+    outline: none;
+}
+#artistResult{
+    display: none;
+}
+/*搜索艺术家*/
+#artistR{
+    display: none;
+}
+#artistR .headerImg{
+    text-align: center;
+    display: inline-block;
+}
+#artistR .headerImg img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+#artistR .headerImg p{
+    font-size: 14px;
+    margin-top: 20px;
+}
+#artistR a img{
+    height: 120px;
+    float: right;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#artistR a p{
+    font-size: 14px;
+    text-align: right;
+    margin-top: -30px;
+}
+#artistR .line{
+    width: 698px;
+    height: 1px;
+    background-color: #b5b5b5;
+    margin-top: 42px;
+    margin-bottom: 50px;
+}
+/*page按钮*/
+#artistPage{
+    display: none;
+}
+#artistPage div{
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#artistPage .page{
+    width: 68px;
+    height: 48px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
+#artistPage .page:hover{
+    color: white;
+    background-color: #000000;
+}
+#artistPage .turn{
+    width: 135px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    background-color: #000000;
+}
